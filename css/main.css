@@ -9,6 +9,7 @@ html { scroll-behavior:smooth; font-size:16px; }
 
 body {
   font-family: var(--font-ar);
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   direction: rtl;
@@ -236,6 +237,7 @@ body.lang-en .topbar i, body.lang-fr .topbar i { margin-left:0; margin-right:5px
 .hero-slide {
   position:absolute; inset:0; opacity:0;
   transition:opacity 1.2s ease;
+  will-change:opacity;
 }
 .hero-slide.active { opacity:1; }
 .hero-slide img {
@@ -494,10 +496,12 @@ body[dir="ltr"] .stat-item { border-left:none; border-right:1px solid rgba(255,2
 .deals-ticker {
   background:var(--primary); color:white; padding:10px 0;
   overflow:hidden; white-space:nowrap;
+  position:relative; width:100%;
 }
 .ticker-track {
   display:inline-flex; gap:60px;
   animation:ticker 30s linear infinite;
+  will-change:transform;
 }
 @keyframes ticker { from { transform:translateX(0); } to { transform:translateX(-50%); } }
 .ticker-item { display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; }
@@ -655,6 +659,78 @@ body[dir="ltr"] .float-wa { left:auto; right:24px; }
   .section { padding:50px 0; }
   .section-header { margin-bottom:32px; }
   .form-row { grid-template-columns:1fr; }
+
+  /* Better mobile search */
+  .search-engine { margin:16px 12px 0; padding:18px 14px; }
+  .search-tab { padding:8px 12px; font-size:12px; gap:5px; }
+  .search-tab i { font-size:14px; }
+  .search-input-wrap { padding:11px 12px; }
+  .search-input-wrap input, .search-input-wrap select { font-size:13px; }
+  .btn-search { height:50px; font-size:14px; padding:12px 20px; border-radius:10px; }
+  .search-field label { font-size:10px; }
+  
+  /* Better mobile hero */
+  .hero-tag { font-size:11px; padding:6px 14px; }
+  .hero-trust { gap:12px; margin-top:28px; }
+  .hero-trust-item { font-size:11px; gap:5px; }
+  .hero-trust-item i { font-size:14px; }
+  
+  /* Better mobile stats */
+  .stat-num { font-size:1.5rem; }
+  .stat-lbl { font-size:11px; }
+  .stat-item { padding:12px 8px; }
+  
+  /* Better mobile services */
+  .service-card { padding:20px 12px; }
+  .service-icon { font-size:26px; }
+  .service-name { font-size:13px; }
+  .service-desc { font-size:11px; }
+  
+  /* Better mobile packages */
+  .pkg-body { padding:16px; }
+  .pkg-title { font-size:15px; }
+  .pkg-features { gap:8px; }
+  .pkg-feat { font-size:11px; }
+  .pkg-price { font-size:1.3rem; }
+  .pkg-footer { flex-wrap:wrap; gap:10px; }
+  .pkg-tabs { gap:6px; }
+  .pkg-tab-btn { padding:7px 14px; font-size:12px; }
+  
+  /* Better mobile visa */
+  .visa-form-card { padding:20px 16px; }
+  .visa-country .flag { font-size:22px; }
+  .visa-country .vname { font-size:11px; }
+  .visa-country .vprice { font-size:11px; }
+  .visa-country { padding:10px 8px; border-radius:10px; }
+  
+  /* Better mobile AI */
+  .ai-card { padding:20px 14px; }
+  .ai-bubble { font-size:13px; padding:10px 14px; }
+  .ai-input { font-size:13px; padding:11px 16px; }
+  
+  /* Better mobile footer */
+  .footer { padding:40px 0 0; }
+  .social-btn { width:34px; height:34px; font-size:14px; }
+  .payment-icon { font-size:10px; padding:3px 7px; }
+  
+  /* Better mobile review cards */
+  .review-card { padding:18px; }
+  .review-text { font-size:13px; }
+  
+  /* Better mobile blog */
+  .blog-img-wrap { height:160px; }
+  .blog-title { font-size:14px; }
+  
+  /* Touch targets - minimum 44px */
+  .btn { min-height:44px; }
+  .nav-links.open a { min-height:48px; display:flex; align-items:center; }
+  .lang-btn { min-height:36px; min-width:36px; }
+  .social-btn { min-height:38px; min-width:38px; }
+  .hero-dot { min-height:20px; min-width:20px; padding:6px; box-sizing:content-box; }
+  
+  /* Float WA bigger on mobile */
+  .float-wa { width:52px; height:52px; font-size:22px; bottom:20px; left:16px; }
+
 }
 @media(max-width:430px) {
   .services-grid { grid-template-columns:repeat(2,1fr); }
@@ -662,4 +738,28 @@ body[dir="ltr"] .float-wa { left:auto; right:24px; }
   .section-title { font-size:1.5rem; }
   .hero-title { font-size:1.9rem; }
   .visa-countries { grid-template-columns:repeat(2,1fr); }
+
+  .hero-title { font-size:1.7rem; }
+  .hero-sub { font-size:.9rem; }
+  .hero-btns .btn { font-size:14px; padding:12px 20px; }
+  .search-tabs { overflow-x:auto; flex-wrap:nowrap; padding-bottom:2px; }
+  .search-tabs::-webkit-scrollbar { display:none; }
+  .pkg-price { font-size:1.2rem; }
+  .destinations-grid { grid-template-columns:1fr; }
+  .dest-img { height:180px; }
+
 }
+
+/* ── MOBILE NAV EXTRA ── */
+@media(max-width:480px) {
+  .logo-title { font-size:14px; }
+  .logo-sub { font-size:8px; }
+  .logo img { height:38px; width:38px; }
+  .nav-inner { padding:0 12px; }
+  .lang-switcher { gap:2px; }
+  .lang-btn { padding:4px 7px; font-size:11px; }
+}
+
+/* ── CONTACT GRID ── */
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+@media(max-width:768px){ .contact-grid { grid-template-columns:1fr; } }
