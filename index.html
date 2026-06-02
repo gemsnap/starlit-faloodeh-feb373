@@ -11,6 +11,9 @@
   <meta property="og:image" content="https://media.base44.com/images/public/6a11952f4d8ce5a485f1893b/e05858b77_Designsanstitre2.png"/>
   <meta property="og:type" content="website"/>
   <meta name="theme-color" content="#c0392b"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
   <link rel="canonical" href="https://medinevoyages.com/"/>
 
   <!-- Preconnects -->
@@ -32,6 +35,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/brands.min.css"/>
   </noscript>
 
+  <!-- LCP preload -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=85&fm=webp&auto=format" fetchpriority="high"/>
+
+  <style>
+    /* Critical CSS - above the fold */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Cairo',sans-serif;background:#f7f9fc;color:#2c3e50;direction:rtl;overflow-x:hidden}
+    .topbar{background:#0f1923;color:rgba(255,255,255,.8);font-size:12.5px;padding:8px 0}
+    .navbar{background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px;max-width:1280px;margin:auto;padding:0 24px}
+    .hero{min-height:92vh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+    .hero-slide.active{opacity:1}
+    .hero-slide img{width:100%;height:100%;object-fit:cover}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,25,35,.82) 0%,rgba(15,25,35,.5) 60%,rgba(192,57,43,.25) 100%)}
+    .hero-content{position:relative;z-index:2;text-align:center;padding:40px 24px;max-width:980px}
+    @media(max-width:768px){.topbar{display:none}.nav-inner{height:60px;padding:0 16px}.hero{min-height:85vh}}
+  </style>
   <!-- Styles -->
   <link rel="stylesheet" href="css/variables.css"/>
   <link rel="stylesheet" href="css/main.css"/>
@@ -170,7 +192,12 @@
 <section class="hero" id="home">
   <div class="hero-slides">
     <div class="hero-slide active">
-      <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1600&q=85&fm=webp&auto=format" alt="إسطنبول" loading="eager" fetchpriority="high"/>
+      <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1600&q=85&fm=webp&auto=format"
+           srcset="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=768&q=80&fm=webp&auto=format 768w,
+                   https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1280&q=85&fm=webp&auto=format 1280w,
+                   https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1600&q=85&fm=webp&auto=format 1600w"
+           sizes="100vw"
+           alt="إسطنبول" loading="eager" fetchpriority="high"/>
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-slide">
@@ -942,7 +969,7 @@
     <div class="blog-grid">
       <article class="blog-card fade-up">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=70&fm=webp&auto=format" alt="دليل إسطنبول" loading="lazy" width="300" height="190"/>
+          <img class="blog-img" src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=70&fm=webp&auto=format" alt="دليل إسطنبول" loading="lazy" width="600" height="190" width="300" height="190"/>
         </div>
         <div class="blog-body">
           <div class="blog-category">السياحة · تركيا</div>
@@ -955,7 +982,7 @@
       </article>
       <article class="blog-card fade-up">
         <div class="blog-img-wrap">
-          <img class="blog-img" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=70&fm=webp&auto=format" alt="دبي" loading="lazy" width="300" height="190"/>
+          <img class="blog-img" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=70&fm=webp&auto=format" alt="دبي" loading="lazy" width="600" height="190"/>
         </div>
         <div class="blog-body">
           <div class="blog-category">السياحة · الإمارات</div>
@@ -991,7 +1018,7 @@
       <h2 class="section-title">نحن هنا لمساعدتك</h2>
       <p class="section-sub">فريقنا متاح 7 أيام في الأسبوع من 8 صباحاً حتى 10 مساءً</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start" class="fade-up" id="contact-grid-main">
+    <div class="contact-grid fade-up" id="contact-grid-main">
       <div>
         <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px">
           <div class="card" style="padding:20px;display:flex;align-items:center;gap:16px">
@@ -1286,12 +1313,7 @@
     }, 2000);
   }
 
-  // Mobile contact grid
-  const cg = document.getElementById('contact-grid-main');
-  if(window.innerWidth <= 768 && cg) cg.style.gridTemplateColumns = '1fr';
-  window.addEventListener('resize', () => {
-    if(cg) cg.style.gridTemplateColumns = window.innerWidth <= 768 ? '1fr' : '1fr 1fr';
-  });
+  // Contact grid handled by CSS
 </script>
 <script src="js/main.js" defer></script>
 </body>
