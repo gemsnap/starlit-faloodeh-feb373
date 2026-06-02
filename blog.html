@@ -2,128 +2,508 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>مدونة السفر | أسفار المدينة — نصائح ودليل السفر من المغرب</title>
-  <meta name="description" content="مدونة أسفار المدينة: دليل السفر الشامل، نصائح العمرة والحج، أفضل وجهات السياحة من المغرب — تركيا، دبي، المالديف، باريس وأكثر."/>
-  <meta name="keywords" content="مدونة سفر مغرب, نصائح سفر, دليل عمرة, رحلات تركيا, رحلات دبي, وكالة سفر مغرب"/>
-  <link rel="canonical" href="https://medinevoyages.ma/blog/"/>
-  <meta property="og:title" content="مدونة السفر | أسفار المدينة"/>
-  <meta property="og:description" content="نصائح ودليل السفر من المغرب — عمرة، تركيا، دبي، المالديف وأكثر"/>
-  <meta property="og:image" content="https://media.base44.com/images/public/6a11952f4d8ce5a485f1893b/e05858b77_Designsanstitre2.png"/>
-  <meta property="og:type" content="blog"/>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Blog","name":"مدونة أسفار المدينة","description":"دليل السفر من المغرب","url":"https://medinevoyages.ma/blog/","publisher":{"@type":"Organization","name":"Medine Voyages","logo":"https://media.base44.com/images/public/6a11952f4d8ce5a485f1893b/e05858b77_Designsanstitre2.png"}}
-  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>مدونة السفر | أسفار المدينة - Medine Voyages</title>
+  <meta name="description" content="مدونة السفر من أسفار المدينة — دليل شامل للوجهات السياحية، نصائح السفر، التأشيرات، العمرة وأكثر من 50 مقال متخصص."/>
+  <meta name="theme-color" content="#c0392b"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
   <style>
-    :root{--primary:#c0392b;--green:#1a6b3a;--gold:#d4a017;--dark:#0f0f1a;--text:#2c2c2c;--text-light:#666;--bg:#f8f9fa;--border:#e0e0e0;--shadow:0 8px 32px rgba(0,0,0,.12);--radius:16px;--radius-sm:10px;}
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Cairo',sans-serif;color:var(--text);background:var(--bg);direction:rtl;}
-    .navbar{background:white;box-shadow:0 2px 20px rgba(0,0,0,.08);position:sticky;top:0;z-index:100;}
-    .nav-inner{max-width:1300px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px;}
-    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-    .logo img{height:44px;object-fit:contain;}
-    .logo-title{font-size:16px;font-weight:800;color:var(--primary);}
-    .logo-sub{font-size:10px;color:var(--green);font-weight:700;letter-spacing:1px;}
-    .btn-back{background:var(--primary);color:white;text-decoration:none;padding:8px 18px;border-radius:var(--radius-sm);font-size:13px;font-weight:700;display:flex;align-items:center;gap:7px;}
+    .blog-hero {
+      background: var(--grad-dark);
+      padding: 80px 0 60px;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1400&q=60&fm=webp&auto=format') center/cover;
+      opacity: .18;
+    }
+    .blog-hero-content { position: relative; z-index: 2; }
+    .blog-hero h1 { font-size: clamp(2rem,5vw,3.2rem); font-weight:900; margin-bottom:12px; }
+    .blog-hero p { font-size:1.05rem; color:rgba(255,255,255,.75); max-width:500px; margin:auto; }
 
-    .blog-hero{background:linear-gradient(135deg,var(--dark),#2c1810);padding:60px 24px;text-align:center;color:white;}
-    .blog-hero .tag{display:inline-block;background:rgba(26,107,58,.3);color:#4caf50;padding:5px 16px;border-radius:50px;font-size:12px;font-weight:700;margin-bottom:12px;}
-    .blog-hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;margin-bottom:12px;}
-    .blog-hero h1 span{color:#f0c040;}
-    .blog-hero p{color:rgba(255,255,255,.75);font-size:1rem;max-width:550px;margin:auto;}
+    .blog-search-bar {
+      max-width: 560px; margin: 28px auto 0;
+      display: flex; gap: 10px;
+    }
+    .blog-search-bar input {
+      flex:1; padding:13px 20px; border-radius:50px;
+      border:none; font-size:14px; font-family:'Cairo',sans-serif;
+      color: var(--text);
+    }
+    .blog-search-bar button {
+      padding:13px 24px; border-radius:50px;
+      background:var(--primary); color:white;
+      border:none; font-family:'Cairo',sans-serif;
+      font-weight:700; cursor:pointer;
+    }
 
-    .blog-container{max-width:1300px;margin:0 auto;padding:56px 24px;}
-    .blog-cats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;justify-content:center;}
-    .cat-btn{padding:7px 18px;border:1.5px solid var(--border);background:white;border-radius:50px;font-family:'Cairo',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:all .3s;}
-    .cat-btn:hover,.cat-btn.active{background:var(--primary);border-color:var(--primary);color:white;}
-    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;}
-    .blog-card{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all .35s;border:1.5px solid var(--border);text-decoration:none;color:inherit;display:block;}
-    .blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.18);border-color:var(--green);}
-    .blog-img-wrap{height:190px;overflow:hidden;position:relative;}
-    .blog-img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
-    .blog-card:hover .blog-img{transform:scale(1.06);}
-    .blog-cat-badge{position:absolute;top:13px;right:13px;background:var(--green);color:white;padding:5px 12px;border-radius:50px;font-size:11px;font-weight:700;}
-    .blog-body{padding:20px;}
-    .blog-meta{font-size:11.5px;color:var(--text-light);margin-bottom:8px;display:flex;gap:12px;}
-    .blog-meta i{margin-left:3px;color:var(--primary);}
-    .blog-title{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:8px;line-height:1.4;}
-    .blog-excerpt{font-size:12.5px;color:var(--text-light);line-height:1.7;margin-bottom:12px;}
-    .blog-read{color:var(--primary);font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:5px;}
+    .blog-cats {
+      display:flex; gap:8px; flex-wrap:wrap;
+      justify-content:center; padding:28px 0 0;
+    }
+    .blog-cat-btn {
+      padding:8px 20px; border-radius:50px; font-size:13px; font-weight:700;
+      border:2px solid var(--border); background:white; color:var(--text-muted);
+      cursor:pointer; transition:var(--transition); font-family:'Cairo',sans-serif;
+    }
+    .blog-cat-btn.active, .blog-cat-btn:hover {
+      border-color:var(--primary); background:var(--primary); color:white;
+    }
 
-    footer{background:var(--dark);color:rgba(255,255,255,.6);padding:30px 24px;text-align:center;font-size:13px;}
-    footer a{color:rgba(255,255,255,.5);text-decoration:none;margin:0 8px;}
-    .float-wa{position:fixed;bottom:24px;left:24px;z-index:999;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:24px;box-shadow:0 6px 25px rgba(37,211,102,.5);text-decoration:none;}
+    .blog-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 36px;
+      align-items: start;
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    .article-card {
+      background:white; border-radius:var(--radius);
+      overflow:hidden; box-shadow:var(--shadow);
+      border:1.5px solid var(--border); transition:var(--transition);
+      display:flex; flex-direction:column;
+    }
+    .article-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+    .article-card a { text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%; }
+    .article-img-wrap { height:180px; overflow:hidden; flex-shrink:0; }
+    .article-img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+    .article-card:hover .article-img { transform:scale(1.06); }
+    .article-body { padding:16px; display:flex; flex-direction:column; flex:1; }
+    .article-cat {
+      font-size:10px; font-weight:700; color:var(--primary);
+      letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;
+    }
+    .article-title {
+      font-size:15px; font-weight:800; color:var(--dark);
+      line-height:1.4; margin-bottom:8px; flex:1;
+    }
+    .article-excerpt {
+      font-size:12.5px; color:var(--text-muted);
+      line-height:1.6; margin-bottom:12px;
+      display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+    }
+    .article-meta {
+      display:flex; align-items:center; justify-content:space-between;
+      font-size:11px; color:var(--text-muted); padding-top:10px;
+      border-top:1px solid var(--border); margin-top:auto;
+    }
+    .article-read { color:var(--primary); font-weight:700; font-size:12px; }
+
+    /* Featured article */
+    .article-card.featured .article-img-wrap { height:240px; }
+    .article-card.featured .article-title { font-size:18px; }
+
+    /* Sidebar */
+    .blog-sidebar { position:sticky; top:90px; }
+    .sidebar-widget {
+      background:white; border-radius:var(--radius);
+      padding:22px; border:1.5px solid var(--border);
+      box-shadow:var(--shadow); margin-bottom:22px;
+    }
+    .sidebar-title {
+      font-size:14px; font-weight:800; color:var(--dark);
+      margin-bottom:16px; padding-bottom:10px;
+      border-bottom:2px solid var(--primary);
+    }
+    .popular-item {
+      display:flex; gap:12px; margin-bottom:14px;
+      padding-bottom:14px; border-bottom:1px solid var(--border);
+    }
+    .popular-item:last-child { border:none; margin:0; padding:0; }
+    .popular-img {
+      width:70px; height:56px; border-radius:8px;
+      object-fit:cover; flex-shrink:0;
+    }
+    .popular-title { font-size:13px; font-weight:700; color:var(--dark); line-height:1.4; margin-bottom:4px; }
+    .popular-date { font-size:11px; color:var(--text-muted); }
+
+    .tag-cloud { display:flex; flex-wrap:wrap; gap:8px; }
+    .tag {
+      padding:5px 14px; border-radius:20px; font-size:12px; font-weight:600;
+      background:var(--bg); color:var(--text-muted); border:1px solid var(--border);
+      cursor:pointer; transition:var(--transition);
+    }
+    .tag:hover { background:var(--primary); color:white; border-color:var(--primary); }
+
+    .wa-widget {
+      background:linear-gradient(135deg,#25d366,#128c7e);
+      border-radius:var(--radius); padding:22px; color:white; text-align:center;
+    }
+    .wa-widget i { font-size:2rem; margin-bottom:10px; }
+    .wa-widget h4 { font-size:15px; font-weight:800; margin-bottom:8px; }
+    .wa-widget p { font-size:12.5px; opacity:.9; margin-bottom:14px; }
+    .wa-widget a { background:white; color:#25d366; padding:10px 20px; border-radius:50px; font-weight:800; font-size:13px; display:inline-block; }
+
+    /* Pagination */
+    .pagination {
+      display:flex; justify-content:center; gap:8px; margin-top:36px; flex-wrap:wrap;
+    }
+    .page-btn {
+      width:40px; height:40px; border-radius:10px; border:1.5px solid var(--border);
+      background:white; color:var(--text); font-weight:700; font-size:14px;
+      cursor:pointer; transition:var(--transition); display:flex; align-items:center; justify-content:center;
+      font-family:'Cairo',sans-serif;
+    }
+    .page-btn.active, .page-btn:hover { background:var(--primary); color:white; border-color:var(--primary); }
+
+    @media(max-width:1024px) {
+      .blog-main-grid { grid-template-columns:1fr; }
+      .blog-sidebar { position:static; }
+    }
+    @media(max-width:768px) {
+      .articles-grid { grid-template-columns:1fr; }
+      .blog-hero { padding:50px 0 40px; }
+      .blog-search-bar { flex-direction:column; padding:0 16px; }
+      .blog-cats { padding:20px 16px 0; }
+    }
   </style>
 </head>
-<body>
-<nav class="navbar">
-  <div class="nav-inner">
+<body class="lang-ar">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-left">
+      <a href="tel:+212680003578"><i class="fas fa-phone"></i> +212 680 003 578</a>
+      <a href="mailto:contact@medinevoyages.ma"><i class="fas fa-envelope"></i> contact@medinevoyages.ma</a>
+    </div>
+    <div class="topbar-right">
+      <span><span class="status-dot"></span> مفتوح 7/7 · 8:00–22:00</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
     <a href="index.html" class="logo">
-      <img src="https://media.base44.com/images/public/6a11952f4d8ce5a485f1893b/e05858b77_Designsanstitre2.png" alt="أسفار المدينة" />
-      <div><div class="logo-title">أسفار المدينة</div><div class="logo-sub">MEDINE VOYAGES</div></div>
+      <img src="https://media.base44.com/images/public/6a11952f4d8ce5a485f1893b/e05858b77_Designsanstitre2.png" alt="Medine Voyages" width="44" height="44"/>
+      <div class="logo-text">
+        <span class="logo-title">أسفار المدينة</span>
+        <span class="logo-sub">MEDINE VOYAGES</span>
+      </div>
     </a>
-    <a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i> الرئيسية</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">الرئيسية</a>
+      <a href="index.html#flights">الطيران</a>
+      <a href="index.html#packages">الباقات</a>
+      <a href="index.html#visa">التأشيرة</a>
+      <a href="blog.html" class="active">المدونة</a>
+      <a href="index.html#contact">تواصل معنا</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="index.html#packages" class="btn btn-primary btn-sm">احجز الآن</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 
+<!-- BLOG HERO -->
 <div class="blog-hero">
-  <span class="tag">📝 المدونة السياحية</span>
-  <h1>دليلك للسفر <span>والاستكشاف</span></h1>
-  <p>نصائح وأدلة من خبراء أسفار المدينة لمساعدتك في رحلتك المثالية</p>
-</div>
-
-<div class="blog-container">
-  <div class="blog-cats">
-    <button class="cat-btn active">الكل</button>
-    <button class="cat-btn">تركيا</button>
-    <button class="cat-btn">دبي</button>
-    <button class="cat-btn">عمرة وحج</button>
-    <button class="cat-btn">المغرب</button>
-    <button class="cat-btn">VIP</button>
-    <button class="cat-btn">نصائح السفر</button>
-  </div>
-  <div class="blog-grid">
-    <a href="blog/grand-tour-turquie.html" class="blog-card">
-      <div class="blog-img-wrap"><img class="blog-img" src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80" alt="الجولة الكبرى تركيا إسطنبول" loading="lazy"/><span class="blog-cat-badge">تركيا</span></div>
-      <div class="blog-body"><div class="blog-meta"><span><i class="fas fa-calendar"></i>15 مايو 2026</span><span><i class="fas fa-clock"></i>5 دقائق</span></div><h2 class="blog-title">الجولة الكبرى في تركيا — كل ما تحتاج معرفته</h2><p class="blog-excerpt">دليل شامل لرحلتك إلى إسطنبول: أفضل الأماكن، المطاعم، ونصائح توفير المال...</p><span class="blog-read">اقرأ المزيد <i class="fas fa-arrow-left"></i></span></div>
-    </a>
-    <a href="blog/omra-guide.html" class="blog-card">
-      <div class="blog-img-wrap"><img class="blog-img" src="https://media.base44.com/images/public/6a11952f4d8ce5a485f1893b/220b930e9_Gemini_Generated_Image_1j6gle1j6gle1j6g.png" alt="دليل العمرة للمغاربة" loading="lazy"/><span class="blog-cat-badge">عمرة وحج</span></div>
-      <div class="blog-body"><div class="blog-meta"><span><i class="fas fa-calendar"></i>8 مايو 2026</span><span><i class="fas fa-clock"></i>7 دقائق</span></div><h2 class="blog-title">دليل العمرة الشامل للمغاربة — التحضير والوثائق</h2><p class="blog-excerpt">كل ما تحتاج معرفته قبل رحلة العمرة: الوثائق، أفضل الأوقات، التكاليف...</p><span class="blog-read">اقرأ المزيد <i class="fas fa-arrow-left"></i></span></div>
-    </a>
-    <a href="blog/dubai-travel-guide.html" class="blog-card">
-      <div class="blog-img-wrap"><img class="blog-img" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="دليل السفر دبي من المغرب" loading="lazy"/><span class="blog-cat-badge">دبي</span></div>
-      <div class="blog-body"><div class="blog-meta"><span><i class="fas fa-calendar"></i>1 مايو 2026</span><span><i class="fas fa-clock"></i>6 دقائق</span></div><h2 class="blog-title">دليل السفر إلى دبي من المغرب</h2><p class="blog-excerpt">كيف تحصل على التأشيرة، أفضل المناطق للإقامة، أسرار توفير المال في دبي...</p><span class="blog-read">اقرأ المزيد <i class="fas fa-arrow-left"></i></span></div>
-    </a>
-    <a href="blog/maldives-honeymoon.html" class="blog-card">
-      <div class="blog-img-wrap"><img class="blog-img" src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=80" alt="شهر العسل المالديف للمغاربة" loading="lazy"/><span class="blog-cat-badge" style="background:var(--gold);color:#1a1a1a;">VIP</span></div>
-      <div class="blog-body"><div class="blog-meta"><span><i class="fas fa-calendar"></i>22 أبريل 2026</span><span><i class="fas fa-clock"></i>5 دقائق</span></div><h2 class="blog-title">شهر العسل في المالديف — الدليل الكامل</h2><p class="blog-excerpt">أفضل وقت للسفر، أروع فنادق فوق الماء، الأنشطة الرومانسية...</p><span class="blog-read">اقرأ المزيد <i class="fas fa-arrow-left"></i></span></div>
-    </a>
-    <a href="blog/marrakech-guide.html" class="blog-card">
-      <div class="blog-img-wrap"><img class="blog-img" src="https://media.base44.com/images/public/6a11952f4d8ce5a485f1893b/e4318a373_Gemini_Generated_Image_huy1eohuy1eohuy1.png" alt="دليل مراكش السياحي" loading="lazy"/><span class="blog-cat-badge">المغرب</span></div>
-      <div class="blog-body"><div class="blog-meta"><span><i class="fas fa-calendar"></i>15 أبريل 2026</span><span><i class="fas fa-clock"></i>8 دقائق</span></div><h2 class="blog-title">دليل مراكش — 20 مكاناً يجب زيارته</h2><p class="blog-excerpt">من جامع الفنا إلى سعدي، اكتشف أسرار المدينة الحمراء مع دليلنا الشامل...</p><span class="blog-read">اقرأ المزيد <i class="fas fa-arrow-left"></i></span></div>
-    </a>
-    <a href="blog/visa-tips.html" class="blog-card">
-      <div class="blog-img-wrap"><img class="blog-img" src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=600&q=80" alt="نصائح تأشيرة السفر للمغاربة" loading="lazy"/><span class="blog-cat-badge">نصائح السفر</span></div>
-      <div class="blog-body"><div class="blog-meta"><span><i class="fas fa-calendar"></i>5 أبريل 2026</span><span><i class="fas fa-clock"></i>4 دقائق</span></div><h2 class="blog-title">5 نصائح ذهبية للحصول على تأشيرة شنغن</h2><p class="blog-excerpt">كيف تتجنب رفض التأشيرة، الوثائق المطلوبة، وأسرار نجاح طلبك...</p><span class="blog-read">اقرأ المزيد <i class="fas fa-arrow-left"></i></span></div>
-    </a>
+  <div class="container blog-hero-content">
+    <div class="section-tag" style="background:rgba(255,255,255,.15);color:var(--gold-light);margin-bottom:14px">مدونة السفر</div>
+    <h1>دليلك لأفضل وجهات العالم</h1>
+    <p>أكثر من 50 مقال متخصص في السفر، الوجهات، التأشيرات والنصائح العملية</p>
+    <div class="blog-search-bar">
+      <input type="text" id="searchInput" placeholder="ابحث عن مقال... (إسطنبول، دبي، عمرة...)"/>
+      <button onclick="searchArticles()"><i class="fas fa-search"></i> بحث</button>
+    </div>
   </div>
 </div>
 
-<footer>
-  <p>© 2025 أسفار المدينة · <a href="index.html">الرئيسية</a> · <a href="tel:+212680003578">+212 680 003 578</a></p>
+<!-- CATEGORIES -->
+<div class="container">
+  <div class="blog-cats" id="catFilter">
+    <button class="blog-cat-btn active" data-cat="all">الكل (50)</button>
+    <button class="blog-cat-btn" data-cat="destinations">🌍 الوجهات</button>
+    <button class="blog-cat-btn" data-cat="omra">🕌 العمرة والحج</button>
+    <button class="blog-cat-btn" data-cat="tips">💡 نصائح السفر</button>
+    <button class="blog-cat-btn" data-cat="visa">🛂 التأشيرات</button>
+    <button class="blog-cat-btn" data-cat="honeymoon">💑 شهر العسل</button>
+    <button class="blog-cat-btn" data-cat="budget">💰 السفر الاقتصادي</button>
+    <button class="blog-cat-btn" data-cat="family">👨‍👩‍👧 العائلة</button>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section class="section">
+  <div class="container">
+    <div class="blog-main-grid">
+
+      <!-- ARTICLES -->
+      <div>
+        <div class="articles-grid" id="articlesGrid">
+          <!-- Articles injected by JS -->
+        </div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar">
+
+        <div class="wa-widget">
+          <i class="fab fa-whatsapp"></i>
+          <h4>خطط رحلتك الآن!</h4>
+          <p>تحدث مع خبراء السفر لدينا مجاناً واحصل على أفضل العروض</p>
+          <a href="https://wa.me/212680003578?text=مرحباً،%20قرأت%20المدونة%20وأريد%20الاستفسار">تحدث معنا</a>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="sidebar-title">🔥 الأكثر قراءة</div>
+          <div class="popular-item">
+            <img class="popular-img" src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=200&q=70&fm=webp" alt="إسطنبول" loading="lazy"/>
+            <div>
+              <div class="popular-title">دليل إسطنبول الشامل 2026</div>
+              <div class="popular-date"><i class="fas fa-eye"></i> 12,450 قراءة</div>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img class="popular-img" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=200&q=70&fm=webp" alt="دبي" loading="lazy"/>
+            <div>
+              <div class="popular-title">أفضل 10 أشياء في دبي</div>
+              <div class="popular-date"><i class="fas fa-eye"></i> 9,820 قراءة</div>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img class="popular-img" src="https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?w=200&q=70&fm=webp" alt="مكة" loading="lazy"/>
+            <div>
+              <div class="popular-title">كيف تختار باقة العمرة المثالية</div>
+              <div class="popular-date"><i class="fas fa-eye"></i> 8,340 قراءة</div>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img class="popular-img" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=200&q=70&fm=webp" alt="باريس" loading="lazy"/>
+            <div>
+              <div class="popular-title">باريس بأقل من 5000 درهم</div>
+              <div class="popular-date"><i class="fas fa-eye"></i> 7,120 قراءة</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="sidebar-title">🏷️ الوسوم</div>
+          <div class="tag-cloud">
+            <span class="tag">إسطنبول</span><span class="tag">دبي</span>
+            <span class="tag">باريس</span><span class="tag">مكة</span>
+            <span class="tag">المالديف</span><span class="tag">بالي</span>
+            <span class="tag">لندن</span><span class="tag">روما</span>
+            <span class="tag">عمرة</span><span class="tag">شنغن</span>
+            <span class="tag">تأشيرة</span><span class="tag">هانيمون</span>
+            <span class="tag">رحلات عائلية</span><span class="tag">بميزانية</span>
+            <span class="tag">فنادق</span><span class="tag">طيران</span>
+          </div>
+        </div>
+
+        <div class="sidebar-widget" style="background:var(--grad-primary);color:white;border:none">
+          <div style="font-size:1.8rem;margin-bottom:10px">✈️</div>
+          <div style="font-weight:800;font-size:15px;margin-bottom:8px">عروض الأسبوع</div>
+          <div style="font-size:13px;opacity:.9;margin-bottom:14px">إسطنبول 7 أيام — من 4,200 درهم</div>
+          <a href="index.html#packages" style="background:white;color:var(--primary);padding:10px 20px;border-radius:50px;font-weight:800;font-size:13px;display:inline-block">شاهد العروض</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:30px 0;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(255,255,255,.08)">
+      <span style="font-size:13px;color:rgba(255,255,255,.4)">© 2026 أسفار المدينة — جميع الحقوق محفوظة</span>
+      <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.7)">
+        <i class="fas fa-home"></i> الرئيسية
+      </a>
+    </div>
+  </div>
 </footer>
 
-<a href="https://wa.me/212680003578" class="float-wa" target="_blank" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/212680003578" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
 
 <script>
-document.querySelectorAll('.cat-btn').forEach(b=>b.addEventListener('click',function(){
-  document.querySelectorAll('.cat-btn').forEach(x=>x.classList.remove('active'));
-  this.classList.add('active');
-}));
+const ARTICLES = [
+  // ── DESTINATIONS (15) ──
+  {id:1, cat:'destinations', title:'دليل إسطنبول الشامل 2026: أفضل الأماكن والنصائح', excerpt:'كل ما تحتاج معرفته قبل السفر لإسطنبول — من البازار الكبير حتى كابادوكيا مروراً بأجمل المطاعم والفنادق.', img:'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=75&fm=webp&auto=format', date:'مايو 2026', read:'8 دقائق', views:'12.4K', featured:true},
+  {id:2, cat:'destinations', title:'10 أشياء لا تفوتها عند زيارة دبي في 2026', excerpt:'من برج خليفة إلى صحراء دبي — دليلك الكامل لأفضل التجارب في مدينة المستقبل.', img:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=75&fm=webp&auto=format', date:'مايو 2026', read:'7 دقائق', views:'9.8K'},
+  {id:3, cat:'destinations', title:'باريس في 5 أيام: برنامج سياحي كامل خطوة بخطوة', excerpt:'دليل تفصيلي لزيارة باريس في 5 أيام — برج إيفل، اللوفر، مونمارتر وأجمل المقاهي الباريسية.', img:'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=75&fm=webp&auto=format', date:'أبريل 2026', read:'9 دقائق', views:'7.1K'},
+  {id:4, cat:'destinations', title:'المالديف: جنة على الأرض — كل ما تحتاج معرفته', excerpt:'أفضل جزر المالديف، متى تزورها، أفضل الفنادق العائمة وكيف توفر في رحلة شهر العسل.', img:'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=75&fm=webp&auto=format', date:'أبريل 2026', read:'10 دقائق', views:'6.5K'},
+  {id:5, cat:'destinations', title:'بالي إندونيسيا: دليل السفر الكامل للمسافر العربي', excerpt:'أجمل معابد بالي، شلالاتها، شواطئها وأحياءها الفنية — رحلة لا تُنسى في جنة الاستوائية.', img:'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'8 دقائق', views:'5.9K'},
+  {id:6, cat:'destinations', title:'لندن في أسبوع: دليل السياحة والتسوق والترفيه', excerpt:'بيغ بن، برلين، هارودز وأحياء لندن السرية — برنامج متكامل لزيارة عاصمة الضباب.', img:'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'7 دقائق', views:'5.2K'},
+  {id:7, cat:'destinations', title:'روما الخالدة: خطوات على آثار الإمبراطورية', excerpt:'الكولوسيوم، الفاتيكان، نافورة تريفي — كيف تستمتع بروما في 4 أيام بميزانية معقولة.', img:'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=75&fm=webp&auto=format', date:'فبراير 2026', read:'8 دقائق', views:'4.8K'},
+  {id:8, cat:'destinations', title:'برشلونة: مدينة الفن والبحر والفلامنكو', excerpt:'ساغرادا فاميليا، لاس رامبلاس، شواطئ برشلونة — دليلك لأجمل مدينة في إسبانيا.', img:'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=600&q=75&fm=webp&auto=format', date:'فبراير 2026', read:'7 دقائق', views:'4.2K'},
+  {id:9, cat:'destinations', title:'طوكيو: مدينة المستقبل والتقاليد العريقة', excerpt:'شينجوكو، أكيهابارا، جبل فوجي — رحلة إلى اليابان للمسافر العربي المبتدئ.', img:'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=75&fm=webp&auto=format', date:'يناير 2026', read:'9 دقائق', views:'4.0K'},
+  {id:10, cat:'destinations', title:'القاهرة وجيزة: سفر عبر الزمن مع الفراعنة', excerpt:'الأهرامات، أبو الهول، المتحف المصري — رحلة تاريخية لا تُنسى في قلب مصر.', img:'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=600&q=75&fm=webp&auto=format', date:'يناير 2026', read:'7 دقائق', views:'3.8K'},
+  {id:11, cat:'destinations', title:'ماليزيا: برج بتروناس والغابات الاستوائية', excerpt:'كوالالمبور، جزيرة لنكاوي، بينانج — دليل شامل لأرض التنوع والجمال الطبيعي.', img:'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&q=75&fm=webp&auto=format', date:'ديسمبر 2025', read:'8 دقائق', views:'3.5K'},
+  {id:12, cat:'destinations', title:'المغرب: من مراكش إلى فاس عبر الصحراء', excerpt:'مراكش، فاس، الصحراء الكبرى، شفشاون الزرقاء — جولة كاملة في أجمل مدن المملكة.', img:'https://images.unsplash.com/photo-1539020140153-e479b8c22e71?w=600&q=75&fm=webp&auto=format', date:'ديسمبر 2025', read:'10 دقائق', views:'3.2K'},
+  {id:13, cat:'destinations', title:'كندا: طبيعة خلابة وتجربة سياحية استثنائية', excerpt:'نياغارا، فانكوفر، كيبيك — رحلة إلى أرض الخريف الذهبي والجمال البري.', img:'https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&q=75&fm=webp&auto=format', date:'نوفمبر 2025', read:'8 دقائق', views:'2.9K'},
+  {id:14, cat:'destinations', title:'سنغافورة: مدينة الأحلام بين آسيا والمستقبل', excerpt:'مارينا باي، غاردنز باي ذا باي، السفاري الليلي — رحلة إلى أصغر دولة في آسيا.', img:'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=75&fm=webp&auto=format', date:'نوفمبر 2025', read:'7 دقائق', views:'2.7K'},
+  {id:15, cat:'destinations', title:'مدريد وإشبيلية: عمق الروح الأندلسية', excerpt:'موسيقى الفلامنكو، المسجد الكبير في قرطبة، قصر الحمراء — سفر في الجذور.', img:'https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=600&q=75&fm=webp&auto=format', date:'أكتوبر 2025', read:'9 دقائق', views:'2.5K'},
+
+  // ── OMRA & HAJJ (8) ──
+  {id:16, cat:'omra', title:'كيف تختار أفضل باقة عمرة؟ دليل شامل 2026', excerpt:'معايير اختيار باقة العمرة المثالية — الفندق، النقل، الخدمات وكيف تقارن الأسعار.', img:'https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?w=600&q=75&fm=webp&auto=format', date:'مايو 2026', read:'6 دقائق', views:'8.3K', featured:true},
+  {id:17, cat:'omra', title:'برنامج العمرة المثالي: 14 يوماً في مكة والمدينة', excerpt:'برنامج يومي تفصيلي للعمرة — الزيارات الدينية، الأماكن المقدسة وأفضل أوقات الصلاة.', img:'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=75&fm=webp&auto=format', date:'أبريل 2026', read:'10 دقائق', views:'6.7K'},
+  {id:18, cat:'omra', title:'عمرة رمضان: أجر مضاعف وتجربة روحية فريدة', excerpt:'كيف تستعد لعمرة رمضان، أفضل باقات رمضان وكيف تستفيد من أخر 10 ليالٍ.', img:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'7 دقائق', views:'5.8K'},
+  {id:19, cat:'omra', title:'أسعار باقات العمرة من المغرب 2026: مقارنة شاملة', excerpt:'مقارنة بين أسعار باقات العمرة من الدار البيضاء ومراكش ورباط — أرخص وأفضل الخيارات.', img:'https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'8 دقائق', views:'4.9K'},
+  {id:20, cat:'omra', title:'ماذا تحضر للعمرة؟ قائمة كاملة بكل ما تحتاجه', excerpt:'حقيبة العمرة الكاملة — الملابس، الأدوية، الوثائق، الإلكترونيات وكل التفاصيل.', img:'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=600&q=75&fm=webp&auto=format', date:'فبراير 2026', read:'6 دقائق', views:'4.2K'},
+  {id:21, cat:'omra', title:'المدينة المنورة: أجمل الزيارات الدينية والتاريخية', excerpt:'المسجد النبوي، قباء، أحد، البقيع — دليل الزيارات الدينية في مدينة رسول الله ﷺ.', img:'https://images.unsplash.com/photo-1563177978-4c5ebf35b769?w=600&q=75&fm=webp&auto=format', date:'يناير 2026', read:'8 دقائق', views:'3.8K'},
+  {id:22, cat:'omra', title:'العمرة مع الأطفال: نصائح عملية للعائلات', excerpt:'كيف تنظم رحلة العمرة مع الأطفال — التحضير الجسدي والنفسي، الأماكن المناسبة والأوقات.', img:'https://images.unsplash.com/photo-1511895426328-dc8714191011?w=600&q=75&fm=webp&auto=format', date:'ديسمبر 2025', read:'7 دقائق', views:'3.2K'},
+  {id:23, cat:'omra', title:'الحج 2026: كيف تسجل وما هي الشروط من المغرب', excerpt:'إجراءات التسجيل للحج من المغرب، الوثائق المطلوبة، الأسعار والمواعيد الرسمية.', img:'https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?w=600&q=75&fm=webp&auto=format', date:'نوفمبر 2025', read:'9 دقائق', views:'2.9K'},
+
+  // ── TIPS (10) ──
+  {id:24, cat:'tips', title:'10 نصائح ذهبية لتوفير المال في رحلاتك', excerpt:'كيف تسافر لأوروبا بنصف السعر — أسرار حجز الطيران الرخيص، الفنادق والمطاعم.', img:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=75&fm=webp&auto=format', date:'مايو 2026', read:'6 دقائق', views:'7.4K'},
+  {id:25, cat:'tips', title:'كيف تحجز أرخص تذاكر الطيران في 2026', excerpt:'أفضل تطبيقات مقارنة أسعار الطيران، متى تحجز، وأسرار الطيران بأقل سعر ممكن.', img:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=75&fm=webp&auto=format', date:'أبريل 2026', read:'7 دقائق', views:'6.1K'},
+  {id:26, cat:'tips', title:'حقيبة السفر المثالية: ما تحضره وما تتركه', excerpt:'قائمة الحقيبة الذكية للمسافر — ما تحتاجه فعلاً وكيف تتجنب الأمتعة الزائدة.', img:'https://images.unsplash.com/photo-1553531580-a78bfd247ce0?w=600&q=75&fm=webp&auto=format', date:'أبريل 2026', read:'5 دقائق', views:'5.2K'},
+  {id:27, cat:'tips', title:'التأمين السياحي: لماذا هو ضروري وكيف تختاره', excerpt:'كل ما تريد معرفته عن التأمين السياحي — التغطيات، المقارنة بين الشركات والأسعار.', img:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'6 دقائق', views:'4.3K'},
+  {id:28, cat:'tips', title:'نصائح السفر للمرأة وحدها: الأمان أولاً', excerpt:'كيف تسافر المرأة بأمان — أفضل الوجهات الصديقة، نصائح الأمان والتجارب المشتركة.', img:'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'8 دقائق', views:'3.9K'},
+  {id:29, cat:'tips', title:'كيف تتعامل مع توقف الرحلات والإلغاءات', excerpt:'حقوقك كمسافر، كيف تسترد أموالك وأفضل استراتيجيات التعامل مع تأخير الطيران.', img:'https://images.unsplash.com/photo-1606768666853-403c90a981ad?w=600&q=75&fm=webp&auto=format', date:'فبراير 2026', read:'7 دقائق', views:'3.5K'},
+  {id:30, cat:'tips', title:'السفر في رمضان: نصائح وتجارب من جميع أنحاء العالم', excerpt:'كيف تسافر في رمضان وتستمتع بتجربة مميزة — الوجهات الأنسب وكيف تنظم وقتك.', img:'https://images.unsplash.com/photo-1542816417-0983c9c9ad53?w=600&q=75&fm=webp&auto=format', date:'يناير 2026', read:'7 دقائق', views:'3.1K'},
+  {id:31, cat:'tips', title:'تطبيقات السفر الأساسية: 15 تطبيقاً لا غنى عنه', excerpt:'Google Translate، Maps.me، Hopper، Booking — أفضل التطبيقات لرحلة ناجحة.', img:'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=75&fm=webp&auto=format', date:'ديسمبر 2025', read:'6 دقائق', views:'2.8K'},
+  {id:32, cat:'tips', title:'كيف تختار الفندق المثالي لرحلتك', excerpt:'معايير اختيار الفندق، الفرق بين المواقع، قراءة التقييمات وأفضل المواقع للحجز.', img:'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=75&fm=webp&auto=format', date:'نوفمبر 2025', read:'6 دقائق', views:'2.6K'},
+  {id:33, cat:'tips', title:'الصحة في السفر: نصائح طبية لكل مسافر', excerpt:'اللقاحات، الأدوية الضرورية، التعامل مع المرض في الخارج وتأمين الحالات الطارئة.', img:'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=75&fm=webp&auto=format', date:'أكتوبر 2025', read:'7 دقائق', views:'2.3K'},
+
+  // ── VISA (7) ──
+  {id:34, cat:'visa', title:'تأشيرة شنغن من المغرب 2026: الدليل الكامل', excerpt:'كل ما تحتاجه للحصول على تأشيرة شنغن — الوثائق، الخطوات، أسباب الرفض وكيف تتفاداها.', img:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=75&fm=webp&auto=format', date:'مايو 2026', read:'10 دقائق', views:'9.2K', featured:true},
+  {id:35, cat:'visa', title:'تأشيرة دبي والإمارات: شروط وإجراءات 2026', excerpt:'شروط تأشيرة الإمارات للمغاربة، التأشيرة الإلكترونية، الأسعار والمدة.', img:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=75&fm=webp&auto=format', date:'أبريل 2026', read:'6 دقائق', views:'6.8K'},
+  {id:36, cat:'visa', title:'تأشيرة كندا: كيف تحضر ملفاً ناجحاً', excerpt:'متطلبات تأشيرة كندا، كيف تحضر ملفك، مدة الانتظار ونسب القبول من المغرب.', img:'https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'9 دقائق', views:'5.1K'},
+  {id:37, cat:'visa', title:'تأشيرة تركيا الإلكترونية: سهلة وسريعة', excerpt:'كيف تحصل على تأشيرة تركيا إلكترونياً في 10 دقائق — الخطوات والأسعار.', img:'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=75&fm=webp&auto=format', date:'فبراير 2026', read:'4 دقائق', views:'4.5K'},
+  {id:38, cat:'visa', title:'تأشيرة أمريكا: الوثائق والمقابلة وأسرار النجاح', excerpt:'كيف تحضر لمقابلة تأشيرة أمريكا — الأسئلة الشائعة، الوثائق وأسباب الرفض.', img:'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&q=75&fm=webp&auto=format', date:'يناير 2026', read:'11 دقائق', views:'3.8K'},
+  {id:39, cat:'visa', title:'أسهل تأشيرات العالم للمغاربة في 2026', excerpt:'قائمة بأسهل 15 دولة يمكن للمغاربة زيارتها بتأشيرة سهلة أو بدون تأشيرة.', img:'https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=75&fm=webp&auto=format', date:'ديسمبر 2025', read:'7 دقائق', views:'3.4K'},
+  {id:40, cat:'visa', title:'تأشيرة المملكة المتحدة: بعد البريكست ماذا تغير؟', excerpt:'شروط وإجراءات تأشيرة بريطانيا الجديدة للمغاربة — ما تغير بعد البريكست وكيف تتقدم.', img:'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&q=75&fm=webp&auto=format', date:'نوفمبر 2025', read:'8 دقائق', views:'2.9K'},
+
+  // ── HONEYMOON (5) ──
+  {id:41, cat:'honeymoon', title:'أجمل 10 وجهات لشهر العسل في 2026', excerpt:'المالديف، بالي، سانتوريني، موريشيوس — دليل اختيار الوجهة المثالية لشهر العسل.', img:'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=600&q=75&fm=webp&auto=format', date:'مايو 2026', read:'8 دقائق', views:'6.3K'},
+  {id:42, cat:'honeymoon', title:'شهر عسل في إسطنبول: رومانسية بين شاطئين', excerpt:'أفضل فنادق إسطنبول للعرسان، المطاعم الرومانسية والتجارب الخاصة للأزواج.', img:'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=75&fm=webp&auto=format', date:'أبريل 2026', read:'7 دقائق', views:'4.7K'},
+  {id:43, cat:'honeymoon', title:'موريشيوس: جنة المحيط الهندي للأزواج', excerpt:'فنادق موريشيوس للعرسان، أجمل الشواطئ، الغوص وأفضل وقت للزيارة.', img:'https://images.unsplash.com/photo-1586500036706-41963de24d8b?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'8 دقائق', views:'3.8K'},
+  {id:44, cat:'honeymoon', title:'سانتوريني اليونان: غروب الشمس الأسطوري', excerpt:'أيا ناباء، أويا، فيرا — دليل رحلة شهر العسل في أجمل جزيرة في البحر المتوسط.', img:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=75&fm=webp&auto=format', date:'فبراير 2026', read:'7 دقائق', views:'3.2K'},
+  {id:45, cat:'honeymoon', title:'شهر عسل بميزانية محدودة: 5 وجهات رائعة', excerpt:'شهر عسل لا يُنسى بأقل من 8000 درهم — تركيا، جورجيا، تونس وأجمل الوجهات الاقتصادية.', img:'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=75&fm=webp&auto=format', date:'يناير 2026', read:'6 دقائق', views:'2.9K'},
+
+  // ── BUDGET (5) ──
+  {id:46, cat:'budget', title:'السفر لأوروبا بأقل من 5000 درهم: دليل عملي', excerpt:'كيف تسافر لأوروبا بميزانية محدودة — طيران رخيص، فنادق بأسعار مناسبة ونصائح يومية.', img:'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&q=75&fm=webp&auto=format', date:'أبريل 2026', read:'9 دقائق', views:'5.6K'},
+  {id:47, cat:'budget', title:'باريس بأقل من 3000 درهم في 3 أيام', excerpt:'كيف تزور باريس بميزانية ضيقة — أرخص الفنادق، المطاعم والأنشطة المجانية.', img:'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=75&fm=webp&auto=format', date:'مارس 2026', read:'7 دقائق', views:'4.1K'},
+  {id:48, cat:'budget', title:'السفر الاقتصادي: 15 طريقة لتوفير أكثر من 50%', excerpt:'أسرار المسافر الذكي — من حجز الطيران إلى الأكل المحلي، كيف توفر في كل خطوة.', img:'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=75&fm=webp&auto=format', date:'فبراير 2026', read:'8 دقائق', views:'3.7K'},
+  {id:49, cat:'budget', title:'دبي بميزانية محدودة: ممكن أكثر مما تتخيل', excerpt:'كيف تزور دبي دون إنفاق ثروة — الأنشطة المجانية، المطاعم الشعبية وأرخص الفنادق.', img:'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=75&fm=webp&auto=format', date:'يناير 2026', read:'7 دقائق', views:'3.2K'},
+
+  // ── FAMILY (6) ──
+  {id:50, cat:'family', title:'أفضل 8 وجهات للسياحة العائلية في 2026', excerpt:'وجهات مناسبة للعائلات مع الأطفال — دبي، ماليزيا، تركيا وأوروبا — الأمان والمتعة.', img:'https://images.unsplash.com/photo-1511895426328-dc8714191011?w=600&q=75&fm=webp&auto=format', date:'مايو 2026', read:'8 دقائق', views:'4.8K'},
+];
+
+const ARTICLES_PER_PAGE = 12;
+let currentPage = 1;
+let currentCat = 'all';
+let searchQuery = '';
+
+function getFiltered() {
+  return ARTICLES.filter(a => {
+    const matchCat = currentCat === 'all' || a.cat === currentCat;
+    const matchSearch = !searchQuery ||
+      a.title.includes(searchQuery) ||
+      a.excerpt.includes(searchQuery);
+    return matchCat && matchSearch;
+  });
+}
+
+function renderArticles() {
+  const filtered = getFiltered();
+  const total = filtered.length;
+  const pages = Math.ceil(total / ARTICLES_PER_PAGE);
+  const start = (currentPage - 1) * ARTICLES_PER_PAGE;
+  const slice = filtered.slice(start, start + ARTICLES_PER_PAGE);
+
+  const grid = document.getElementById('articlesGrid');
+  grid.innerHTML = slice.map(a => `
+    <div class="article-card ${a.featured ? 'featured' : ''}">
+      <a href="blog/${slugify(a.title)}.html">
+        <div class="article-img-wrap">
+          <img class="article-img" src="${a.img}" alt="${a.title}" loading="lazy"/>
+        </div>
+        <div class="article-body">
+          <div class="article-cat">${getCatLabel(a.cat)}</div>
+          <div class="article-title">${a.title}</div>
+          <div class="article-excerpt">${a.excerpt}</div>
+          <div class="article-meta">
+            <span><i class="fas fa-calendar"></i> ${a.date}</span>
+            <span><i class="fas fa-clock"></i> ${a.read}</span>
+            <span class="article-read"><i class="fas fa-eye"></i> ${a.views}</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  `).join('');
+
+  // Pagination
+  const pag = document.getElementById('pagination');
+  if (pages <= 1) { pag.innerHTML = ''; return; }
+  let btns = '';
+  for (let i = 1; i <= pages; i++) {
+    btns += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goPage(${i})">${i}</button>`;
+  }
+  pag.innerHTML = btns;
+}
+
+function getCatLabel(cat) {
+  const map = {destinations:'🌍 الوجهات', omra:'🕌 العمرة', tips:'💡 نصائح', visa:'🛂 التأشيرات', honeymoon:'💑 شهر العسل', budget:'💰 اقتصادي', family:'👨‍👩‍👧 العائلة'};
+  return map[cat] || cat;
+}
+
+function slugify(title) {
+  return title.replace(/[^a-zA-Z\u0600-\u06FF\s]/g,'').trim().replace(/\s+/g,'-').substring(0,50);
+}
+
+function goPage(n) {
+  currentPage = n;
+  renderArticles();
+  window.scrollTo({top: document.getElementById('articlesGrid').offsetTop - 100, behavior:'smooth'});
+}
+
+function searchArticles() {
+  searchQuery = document.getElementById('searchInput').value.trim();
+  currentPage = 1;
+  renderArticles();
+}
+
+document.getElementById('searchInput').addEventListener('keypress', e => {
+  if (e.key === 'Enter') searchArticles();
+});
+
+document.querySelectorAll('.blog-cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.blog-cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCat = btn.dataset.cat;
+    currentPage = 1;
+    searchQuery = '';
+    document.getElementById('searchInput').value = '';
+    renderArticles();
+  });
+});
+
+// Navbar hamburger
+document.getElementById('hamburger')?.addEventListener('click', () => {
+  const nl = document.getElementById('navLinks');
+  nl.classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('is-open');
+});
+
+// Init
+renderArticles();
 </script>
 </body>
 </html>
