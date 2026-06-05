@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>العمرة والحج 2026-2027 | أسفار المدينة - Medine Voyages</title>
+  <meta name="description" content="باقات العمرة والحج من المغرب 2026-2027 — عمرة رمضان، عمرة شوال، عمرة الصيف. طيران ذهاب وإياب، فندق 5 نجوم، مرشد ديني. احجز الآن."/>
+  <meta property="og:title" content="باقات العمرة 2026-2027 | أسفار المدينة"/>
+  <meta property="og:description" content="رحلات عمرة راقية من المغرب — خدمة 5 نجوم، مرشد ديني، فنادق قريبة من الحرم"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?w=1200&q=85"/>
+  <meta name="theme-color" content="#c0392b"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <style>
+    /* ══ OMRA PAGE STYLES ══ */
+
+    /* Hero */
+    .omra-hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .omra-hero-slides { position: absolute; inset: 0; }
+    .omra-slide {
+      position: absolute; inset: 0; opacity: 0;
+      transition: opacity 1.4s ease; will-change: opacity;
+    }
+    .omra-slide.active { opacity: 1; }
+    .omra-slide img { width: 100%; height: 100%; object-fit: cover; }
+    .omra-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg,
+        rgba(8,12,20,.92) 0%,
+        rgba(8,12,20,.65) 50%,
+        rgba(140,30,20,.3) 100%);
+    }
+    .omra-hero-inner {
+      position: relative; z-index: 2;
+      width: 100%; padding: 120px 0 60px;
+    }
+    .omra-hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(212,160,23,.15);
+      border: 1px solid rgba(212,160,23,.35);
+      color: #f0c040; font-size: 13px; font-weight: 700;
+      padding: 7px 20px; border-radius: 30px;
+      margin-bottom: 22px; letter-spacing: .5px;
+    }
+    .omra-hero-title {
+      font-size: clamp(2.4rem,6vw,4rem);
+      font-weight: 900; color: white; line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .omra-hero-title em {
+      font-style: normal;
+      background: var(--grad-gold);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .omra-hero-sub {
+      font-size: clamp(1rem,2vw,1.2rem);
+      color: rgba(255,255,255,.75); max-width: 580px;
+      line-height: 1.7; margin-bottom: 36px;
+    }
+    .omra-hero-stats {
+      display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 40px;
+    }
+    .omra-stat {
+      display: flex; flex-direction: column;
+      border-right: 2px solid rgba(255,255,255,.15);
+      padding-right: 24px;
+    }
+    .omra-stat:first-child { border: none; padding: 0; }
+    .omra-stat-num {
+      font-size: 1.9rem; font-weight: 900;
+      color: #f0c040; line-height: 1;
+    }
+    .omra-stat-lbl { font-size: 12px; color: rgba(255,255,255,.6); margin-top: 4px; }
+    .omra-hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-slide-dots {
+      position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+      z-index: 3; display: flex; gap: 8px;
+    }
+    .hero-slide-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,.3); cursor: pointer;
+      transition: var(--transition); border: none;
+    }
+    .hero-slide-dot.active { background: #f0c040; width: 24px; border-radius: 4px; }
+
+    /* Trust bar */
+    .trust-bar {
+      background: rgba(255,255,255,.04);
+      border-top: 1px solid rgba(255,255,255,.08);
+      position: absolute; bottom: 0; left: 0; right: 0;
+      z-index: 3;
+    }
+    .trust-bar-inner {
+      display: flex; justify-content: center;
+      gap: 40px; padding: 16px 24px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,.75); font-size: 13px; font-weight: 600;
+    }
+    .trust-item i { color: #f0c040; font-size: 16px; }
+
+    /* ══ OFFERS SECTION ══ */
+    .omra-section { padding: 80px 0; }
+    .omra-section-header {
+      text-align: center; margin-bottom: 50px;
+    }
+    .section-eyebrow {
+      font-size: 12px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .omra-section-title {
+      font-size: clamp(1.7rem,4vw,2.4rem);
+      font-weight: 900; color: var(--dark); margin-bottom: 12px;
+    }
+    .omra-section-sub {
+      font-size: 15px; color: var(--text-muted); max-width: 520px; margin: auto;
+    }
+
+    /* Offer Cards */
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+    .offer-card {
+      background: white; border-radius: var(--radius-lg);
+      overflow: hidden; box-shadow: var(--shadow);
+      border: 1.5px solid var(--border); transition: var(--transition);
+      display: flex; flex-direction: column;
+      position: relative;
+    }
+    .offer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary);
+    }
+    .offer-card.featured {
+      border-color: var(--gold);
+      box-shadow: 0 8px 40px rgba(212,160,23,.2);
+    }
+    .offer-badge {
+      position: absolute; top: 16px; right: 16px; z-index: 3;
+      padding: 5px 14px; border-radius: 20px;
+      font-size: 11px; font-weight: 800; letter-spacing: .5px;
+    }
+    .badge-hot { background: var(--primary); color: white; }
+    .badge-new { background: #27ae60; color: white; }
+    .badge-promo { background: var(--gold); color: white; }
+    .badge-full { background: #6c7a89; color: white; }
+
+    .offer-img-wrap {
+      position: relative; height: 220px; overflow: hidden;
+    }
+    .offer-img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .offer-card:hover .offer-img { transform: scale(1.07); }
+    .offer-img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 60%);
+    }
+    .offer-img-bottom {
+      position: absolute; bottom: 14px; right: 14px; left: 14px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .offer-duration {
+      background: rgba(0,0,0,.5); backdrop-filter: blur(8px);
+      color: white; font-size: 12px; font-weight: 700;
+      padding: 5px 12px; border-radius: 20px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .offer-stars { color: #f0c040; font-size: 13px; }
+
+    .offer-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+    .offer-cat {
+      font-size: 10px; font-weight: 700; color: var(--primary);
+      letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;
+    }
+    .offer-title {
+      font-size: 17px; font-weight: 900; color: var(--dark);
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .offer-desc {
+      font-size: 13px; color: var(--text-muted); line-height: 1.65;
+      margin-bottom: 16px; flex: 1;
+    }
+    .offer-features {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px;
+    }
+    .offer-feat {
+      display: flex; align-items: center; gap: 5px;
+      background: var(--bg); border-radius: 20px;
+      padding: 5px 12px; font-size: 11px; font-weight: 600; color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .offer-feat i { color: var(--primary); font-size: 11px; }
+
+    .offer-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 16px; border-top: 1.5px solid var(--border);
+    }
+    .offer-price-wrap {}
+    .offer-price-from { font-size: 10px; color: var(--text-muted); font-weight: 600; }
+    .offer-price {
+      font-size: 1.6rem; font-weight: 900; color: var(--primary); line-height: 1;
+    }
+    .offer-price-unit { font-size: 12px; color: var(--text-muted); font-weight: 400; }
+    .offer-price-old {
+      font-size: 12px; color: var(--text-muted);
+      text-decoration: line-through; display: block;
+    }
+    .offer-cta-wrap { display: flex; flex-direction: column; gap: 6px; }
+    .btn-offer-book {
+      padding: 10px 20px; border-radius: 10px;
+      background: var(--grad-primary); color: white;
+      font-size: 13px; font-weight: 800; text-decoration: none;
+      display: flex; align-items: center; gap: 7px;
+      transition: var(--transition); border: none; cursor: pointer;
+      font-family: 'Cairo', sans-serif;
+    }
+    .btn-offer-book:hover { transform: scale(1.04); box-shadow: 0 6px 20px rgba(192,57,43,.35); }
+    .btn-offer-wa {
+      padding: 9px 16px; border-radius: 10px;
+      background: #25d366; color: white;
+      font-size: 12px; font-weight: 700; text-decoration: none;
+      display: flex; align-items: center; gap: 7px;
+      transition: var(--transition);
+    }
+    .btn-offer-wa:hover { background: #128c7e; }
+
+    /* ══ FEATURED OFFER (BIG CARD) ══ */
+    .offer-card.big-card {
+      grid-column: 1 / -1;
+      display: grid; grid-template-columns: 1.4fr 1fr;
+    }
+    .offer-card.big-card .offer-img-wrap { height: 100%; min-height: 340px; }
+    .offer-card.big-card .offer-body { padding: 36px; justify-content: center; }
+    .offer-card.big-card .offer-title { font-size: 22px; }
+
+    /* ══ WHY US ══ */
+    .why-section {
+      background: var(--grad-dark); padding: 80px 0; color: white;
+    }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 24px;
+    }
+    .why-card {
+      text-align: center; padding: 32px 20px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius); transition: var(--transition);
+    }
+    .why-card:hover { background: rgba(255,255,255,.1); transform: translateY(-4px); }
+    .why-icon {
+      width: 64px; height: 64px; border-radius: 18px;
+      background: var(--grad-primary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; color: white; margin: 0 auto 18px;
+    }
+    .why-title { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
+    .why-desc { font-size: 13px; color: rgba(255,255,255,.65); line-height: 1.6; }
+
+    /* ══ INCLUSIONS TABLE ══ */
+    .inclusions-section { padding: 80px 0; background: var(--bg); }
+    .inclusions-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;
+    }
+    .inclusions-list { list-style: none; }
+    .inclusions-list li {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+      font-size: 14px; line-height: 1.6; color: var(--text);
+    }
+    .inclusions-list li:last-child { border: none; }
+    .inclusions-list .inc-icon {
+      width: 34px; height: 34px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; flex-shrink: 0;
+      background: rgba(192,57,43,.08); color: var(--primary);
+    }
+    .inclusions-list .exc-icon {
+      background: rgba(231,76,60,.08); color: #e74c3c;
+    }
+    .inc-text strong { display: block; font-size: 14px; margin-bottom: 2px; }
+    .inc-text span { font-size: 12px; color: var(--text-muted); }
+
+    .inclusions-img {
+      border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-xl); position: sticky; top: 90px;
+    }
+    .inclusions-img img { width: 100%; height: 420px; object-fit: cover; }
+    .inclusions-img-caption {
+      padding: 20px; background: var(--dark); color: white;
+    }
+    .inclusions-img-caption h4 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
+    .inclusions-img-caption p { font-size: 13px; color: rgba(255,255,255,.65); }
+
+    /* ══ TESTIMONIALS ══ */
+    .testimonials-section { padding: 80px 0; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .testimonial-card {
+      background: white; border-radius: var(--radius);
+      padding: 28px; border: 1.5px solid var(--border);
+      box-shadow: var(--shadow); transition: var(--transition);
+    }
+    .testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .test-stars { color: #f0c040; font-size: 15px; margin-bottom: 14px; }
+    .test-text {
+      font-size: 14px; color: var(--text); line-height: 1.75;
+      margin-bottom: 18px; font-style: italic;
+    }
+    .test-author { display: flex; align-items: center; gap: 12px; }
+    .test-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--border);
+    }
+    .test-name { font-size: 14px; font-weight: 800; color: var(--dark); }
+    .test-meta { font-size: 12px; color: var(--text-muted); }
+
+    /* ══ FAQ ══ */
+    .faq-section { padding: 80px 0; background: var(--bg); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .faq-item {
+      background: white; border-radius: var(--radius);
+      border: 1.5px solid var(--border); overflow: hidden;
+    }
+    .faq-q {
+      padding: 18px 22px; font-size: 14px; font-weight: 700; color: var(--dark);
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      gap: 12px;
+    }
+    .faq-q i { color: var(--primary); transition: transform .3s; flex-shrink: 0; }
+    .faq-item.open .faq-q i { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden; transition: max-height .4s ease;
+      font-size: 13.5px; color: var(--text-muted); line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 200px; }
+    .faq-a-inner { padding: 0 22px 18px; }
+
+    /* ══ CTA BANNER ══ */
+    .cta-banner {
+      background: var(--grad-primary); padding: 70px 0; text-align: center; color: white;
+    }
+    .cta-banner h2 { font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 900; margin-bottom: 14px; }
+    .cta-banner p { font-size: 15px; opacity: .85; max-width: 500px; margin: 0 auto 32px; }
+    .cta-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+    /* ══ GALLERY SECTION ══ */
+    .gallery-section { padding: 80px 0; }
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: 200px 200px;
+      gap: 12px;
+    }
+    .gal-item { overflow: hidden; border-radius: var(--radius-sm); cursor: pointer; }
+    .gal-item:nth-child(1) { grid-column: 1/3; grid-row: 1/3; }
+    .gal-item:nth-child(4) { grid-row: 1/3; }
+    .gal-item img { width:100%; height:100%; object-fit:cover; transition: transform .5s ease; }
+    .gal-item:hover img { transform: scale(1.07); }
+
+    /* ══ SCROLL TOP ══ */
+    .scroll-top {
+      position: fixed; bottom: 90px; left: 16px; z-index: 999;
+      width: 42px; height: 42px; border-radius: 12px;
+      background: white; border: 1.5px solid var(--border);
+      box-shadow: var(--shadow); color: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; opacity: 0; transition: var(--transition);
+      font-size: 16px;
+    }
+    .scroll-top.show { opacity: 1; }
+
+    /* ══ MODAL BOOKING ══ */
+    .modal-booking {
+      max-width: 500px; text-align: right;
+    }
+    .modal-booking h3 { font-size: 1.3rem; font-weight: 900; margin-bottom: 4px; }
+    .modal-booking .offer-name { font-size: 14px; color: var(--primary); font-weight: 700; margin-bottom: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 5px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 16px; border: 1.5px solid var(--border);
+      border-radius: 10px; font-family: 'Cairo',sans-serif; font-size: 14px; color: var(--text);
+      transition: var(--transition);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--primary); box-shadow: 0 0 0 3px rgba(192,57,43,.1); outline: none;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1024px) {
+      .offers-grid { grid-template-columns: repeat(2,1fr); }
+      .offer-card.big-card { grid-column: auto; grid-template-columns: 1fr; }
+      .offer-card.big-card .offer-img-wrap { height: 260px; }
+      .why-grid { grid-template-columns: repeat(2,1fr); }
+      .inclusions-grid { grid-template-columns: 1fr; }
+      .inclusions-img { position: static; }
+      .gallery-masonry { grid-template-columns: repeat(3,1fr); }
+    }
+    @media(max-width:768px) {
+      .omra-hero-inner { padding: 90px 0 80px; }
+      .omra-hero-stats { gap: 16px; }
+      .omra-stat { padding-right: 14px; }
+      .omra-stat-num { font-size: 1.5rem; }
+      .offers-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .gallery-masonry { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gal-item:nth-child(1) { grid-column:1/3; grid-row: auto; height: 200px; }
+      .gal-item:nth-child(4) { grid-row: auto; }
+      .trust-bar-inner { gap: 16px; }
+      .cta-btns { flex-direction: column; align-items: center; }
+    }
+    @media(max-width:480px) {
+      .omra-hero-stats { display: none; }
+      .why-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="lang-ar">
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-left">
+      <a href="tel:+212680003578"><i class="fas fa-phone"></i> +212 680 003 578</a>
+      <a href="mailto:contact@medinevoyages.ma"><i class="fas fa-envelope"></i> contact@medinevoyages.ma</a>
+    </div>
+    <div class="topbar-right">
+      <span><span class="status-dot"></span> مفتوح 7/7 · 8:00–22:00</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <img src="https://media.base44.com/images/public/6a11952f4d8ce5a485f1893b/e05858b77_Designsanstitre2.png" alt="Medine Voyages" width="44" height="44"/>
+      <div class="logo-text">
+        <span class="logo-title">أسفار المدينة</span>
+        <span class="logo-sub">MEDINE VOYAGES</span>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">الرئيسية</a>
+      <a href="index.html#packages">الباقات</a>
+      <a href="omra.html" class="active">العمرة</a>
+      <a href="index.html#visa">التأشيرة</a>
+      <a href="blog.html">المدونة</a>
+      <a href="index.html#contact">تواصل معنا</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="tel:+212680003578" class="btn btn-primary btn-sm">
+        <i class="fas fa-phone"></i> +212 680 003 578
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════
+     HERO
+════════════════════════════════ -->
+<div class="omra-hero" id="omra-hero">
+  <div class="omra-hero-slides">
+    <div class="omra-slide active">
+      <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1600&q=85&fm=webp&auto=format" alt="المسجد الحرام" loading="eager" fetchpriority="high"/>
+    </div>
+    <div class="omra-slide">
+      <img src="https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?w=1600&q=85&fm=webp&auto=format" alt="الكعبة المشرفة" loading="lazy"/>
+    </div>
+    <div class="omra-slide">
+      <img src="https://images.unsplash.com/photo-1563177978-4c5ebf35b769?w=1600&q=85&fm=webp&auto=format" alt="المدينة المنورة" loading="lazy"/>
+    </div>
+    <div class="omra-slide">
+      <img src="https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?w=1600&q=85&fm=webp&auto=format" alt="الطواف" loading="lazy"/>
+    </div>
+  </div>
+  <div class="omra-overlay"></div>
+
+  <div class="omra-hero-inner">
+    <div class="container">
+      <div class="omra-hero-tag">
+        <i class="fas fa-kaaba"></i> باقات العمرة 2026 — 2027
+      </div>
+      <h1 class="omra-hero-title">
+        رحلة روحية لا تُنسى<br/>
+        إلى <em>أطهر بقاع الأرض</em>
+      </h1>
+      <p class="omra-hero-sub">
+        من المغرب إلى مكة المكرمة والمدينة المنورة — باقات عمرة راقية بخدمة 5 نجوم، مرشد ديني متخصص، وتجربة روحية فريدة من نوعها
+      </p>
+      <div class="omra-hero-stats">
+        <div class="omra-stat">
+          <span class="omra-stat-num">+500</span>
+          <span class="omra-stat-lbl">حاج سافر معنا</span>
+        </div>
+        <div class="omra-stat">
+          <span class="omra-stat-num">10+</span>
+          <span class="omra-stat-lbl">سنوات خبرة</span>
+        </div>
+        <div class="omra-stat">
+          <span class="omra-stat-num">4.9 ★</span>
+          <span class="omra-stat-lbl">تقييم العملاء</span>
+        </div>
+        <div class="omra-stat">
+          <span class="omra-stat-num">3</span>
+          <span class="omra-stat-lbl">باقات متاحة</span>
+        </div>
+      </div>
+      <div class="omra-hero-btns">
+        <a href="#offers-section" class="btn btn-primary btn-lg">
+          <i class="fas fa-kaaba"></i> اكتشف الباقات
+        </a>
+        <a href="https://wa.me/212680003578?text=أريد%20الاستفسار%20عن%20باقات%20العمرة" target="_blank" class="btn btn-ghost btn-lg">
+          <i class="fab fa-whatsapp"></i> تحدث مع مستشار
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide dots -->
+  <div class="hero-slide-dots" id="hero-dots">
+    <button class="hero-slide-dot active" onclick="goSlide(0)"></button>
+    <button class="hero-slide-dot" onclick="goSlide(1)"></button>
+    <button class="hero-slide-dot" onclick="goSlide(2)"></button>
+    <button class="hero-slide-dot" onclick="goSlide(3)"></button>
+  </div>
+
+  <!-- Trust bar -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item"><i class="fas fa-plane"></i> طيران ذهاب وإياب</div>
+      <div class="trust-item"><i class="fas fa-hotel"></i> فندق 5 نجوم</div>
+      <div class="trust-item"><i class="fas fa-user-tie"></i> مرشد ديني</div>
+      <div class="trust-item"><i class="fas fa-shield-alt"></i> تأمين طبي شامل</div>
+      <div class="trust-item"><i class="fas fa-undo"></i> إلغاء مجاني</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     OFFERS
+════════════════════════════════ -->
+<section class="omra-section" id="offers-section">
+  <div class="container">
+    <div class="omra-section-header fade-up">
+      <div class="section-eyebrow">باقاتنا لهذا الموسم</div>
+      <h2 class="omra-section-title">اختر الباقة المناسبة لك</h2>
+      <p class="omra-section-sub">ثلاث باقات مصممة لتناسب كل الميزانيات — جميعها بنفس الجودة والخدمة المتميزة</p>
+    </div>
+
+    <div class="offers-grid">
+
+      <!-- ── OFFER 1: Ramadan (BIG FEATURED) ── -->
+      <div class="offer-card big-card featured fade-up">
+        <span class="offer-badge badge-hot">🔥 الأكثر طلباً</span>
+        <div class="offer-img-wrap">
+          <img class="offer-img" src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=900&q=85&fm=webp&auto=format" alt="عمرة رمضان 2027" loading="lazy"/>
+          <div class="offer-img-overlay"></div>
+          <div class="offer-img-bottom">
+            <div class="offer-duration"><i class="fas fa-clock"></i> 39 يوماً</div>
+            <div class="offer-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="offer-body">
+          <div class="offer-cat">🕌 عمرة رمضان</div>
+          <div class="offer-title">عمرة رمضان 2027 — قلب الشهر الفضيل</div>
+          <div class="offer-desc">
+            رحلة روحانية استثنائية خلال شهر رمضان المبارك — أداء العمرة وإحياء ليالي رمضان في قلب المسجد الحرام. صلاة التراويح والتهجد مع العلماء، وإدراك ليلة القدر في أطهر البقاع.
+          </div>
+          <div class="offer-features">
+            <span class="offer-feat"><i class="fas fa-plane"></i> طيران مباشر</span>
+            <span class="offer-feat"><i class="fas fa-hotel"></i> فندق 5★ بالحرم</span>
+            <span class="offer-feat"><i class="fas fa-utensils"></i> وجبات مشمولة</span>
+            <span class="offer-feat"><i class="fas fa-passport"></i> تأشيرة مشمولة</span>
+            <span class="offer-feat"><i class="fas fa-user-tie"></i> مرشد ديني</span>
+            <span class="offer-feat"><i class="fas fa-bus"></i> نقل داخلي</span>
+          </div>
+          <div class="offer-footer">
+            <div class="offer-price-wrap">
+              <span class="offer-price-from">ابتداءً من</span>
+              <div class="offer-price">8,500 <span class="offer-price-unit">درهم</span></div>
+              <span class="offer-price-old">10,200 درهم</span>
+            </div>
+            <div class="offer-cta-wrap">
+              <button class="btn-offer-book" onclick="openBooking('عمرة رمضان 2027','8,500 درهم')">
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </button>
+              <a href="https://wa.me/212680003578?text=أريد%20حجز%20عمرة%20رمضان%202027" target="_blank" class="btn-offer-wa">
+                <i class="fab fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── OFFER 2: Chaoual ── -->
+      <div class="offer-card fade-up">
+        <span class="offer-badge badge-new">✨ جديد</span>
+        <div class="offer-img-wrap">
+          <img class="offer-img" src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=700&q=80&fm=webp&auto=format" alt="عمرة شوال" loading="lazy"/>
+          <div class="offer-img-overlay"></div>
+          <div class="offer-img-bottom">
+            <div class="offer-duration"><i class="fas fa-clock"></i> 14 يوماً</div>
+            <div class="offer-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="offer-body">
+          <div class="offer-cat">🌙 عمرة شوال</div>
+          <div class="offer-title">عمرة شوال 2026 — بركة ما بعد رمضان</div>
+          <div class="offer-desc">
+            استثمر أجر ستة أيام من شوال مع أداء العمرة في جو روحاني هادئ. برنامج 14 يوماً متوازن بين العبادة والراحة.
+          </div>
+          <div class="offer-features">
+            <span class="offer-feat"><i class="fas fa-plane"></i> طيران إياب</span>
+            <span class="offer-feat"><i class="fas fa-hotel"></i> فندق 4★</span>
+            <span class="offer-feat"><i class="fas fa-utensils"></i> إفطار مشمول</span>
+            <span class="offer-feat"><i class="fas fa-passport"></i> تأشيرة</span>
+            <span class="offer-feat"><i class="fas fa-user-tie"></i> مرشد</span>
+          </div>
+          <div class="offer-footer">
+            <div class="offer-price-wrap">
+              <span class="offer-price-from">ابتداءً من</span>
+              <div class="offer-price">5,200 <span class="offer-price-unit">درهم</span></div>
+              <span class="offer-price-old">6,400 درهم</span>
+            </div>
+            <div class="offer-cta-wrap">
+              <button class="btn-offer-book" onclick="openBooking('عمرة شوال 2026','5,200 درهم')">
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </button>
+              <a href="https://wa.me/212680003578?text=أريد%20حجز%20عمرة%20شوال%202026" target="_blank" class="btn-offer-wa">
+                <i class="fab fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── OFFER 3: Summer ── -->
+      <div class="offer-card fade-up">
+        <span class="offer-badge badge-promo">💰 أفضل سعر</span>
+        <div class="offer-img-wrap">
+          <img class="offer-img" src="https://images.unsplash.com/photo-1563177978-4c5ebf35b769?w=700&q=80&fm=webp&auto=format" alt="عمرة الصيف" loading="lazy"/>
+          <div class="offer-img-overlay"></div>
+          <div class="offer-img-bottom">
+            <div class="offer-duration"><i class="fas fa-clock"></i> 10 أيام</div>
+            <div class="offer-stars">★★★★☆</div>
+          </div>
+        </div>
+        <div class="offer-body">
+          <div class="offer-cat">☀️ عمرة الصيف</div>
+          <div class="offer-title">عمرة صيف 2026 — رحلة قصيرة للروح</div>
+          <div class="offer-desc">
+            باقة اقتصادية مثالية لمن يريد أداء العمرة في وقت قصير. 10 أيام بين مكة والمدينة بأسعار تنافسية ومتناسبة.
+          </div>
+          <div class="offer-features">
+            <span class="offer-feat"><i class="fas fa-plane"></i> طيران إياب</span>
+            <span class="offer-feat"><i class="fas fa-hotel"></i> فندق 3★+</span>
+            <span class="offer-feat"><i class="fas fa-passport"></i> تأشيرة</span>
+            <span class="offer-feat"><i class="fas fa-bus"></i> نقل</span>
+          </div>
+          <div class="offer-footer">
+            <div class="offer-price-wrap">
+              <span class="offer-price-from">ابتداءً من</span>
+              <div class="offer-price">3,800 <span class="offer-price-unit">درهم</span></div>
+              <span class="offer-price-old">4,500 درهم</span>
+            </div>
+            <div class="offer-cta-wrap">
+              <button class="btn-offer-book" onclick="openBooking('عمرة صيف 2026','3,800 درهم')">
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </button>
+              <a href="https://wa.me/212680003578?text=أريد%20حجز%20عمرة%20الصيف%202026" target="_blank" class="btn-offer-wa">
+                <i class="fab fa-whatsapp"></i> واتساب
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     WHY US
+════════════════════════════════ -->
+<section class="why-section">
+  <div class="container">
+    <div class="omra-section-header fade-up" style="color:white">
+      <div class="section-eyebrow" style="color:#f0c040">لماذا تختارنا</div>
+      <h2 class="omra-section-title" style="color:white">نحن نعتني بكل تفصيلة رحلتك</h2>
+      <p class="omra-section-sub" style="color:rgba(255,255,255,.65)">
+        أكثر من 10 سنوات من تنظيم رحلات العمرة من المغرب — ثقة +500 عميل
+      </p>
+    </div>
+    <div class="why-grid fade-up">
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-medal"></i></div>
+        <div class="why-title">خبرة 10+ سنوات</div>
+        <div class="why-desc">نظمنا أكثر من 80 رحلة عمرة وحج من المغرب بتقييم 4.9/5</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-hotel"></i></div>
+        <div class="why-title">فنادق قريبة من الحرم</div>
+        <div class="why-desc">اخترنا فنادق تبعد 50 إلى 200 متر فقط عن المسجد الحرام والنبوي</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-user-tie"></i></div>
+        <div class="why-title">مرشد ديني متخصص</div>
+        <div class="why-desc">مؤطر ديني معنا طيلة الرحلة لإرشادكم وتيسير المناسك وتعليم الأدعية</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-headset"></i></div>
+        <div class="why-title">دعم 24/7</div>
+        <div class="why-desc">فريقنا متاح دائماً عبر الهاتف والواتساب قبل الرحلة وأثناءها وبعدها</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     GALLERY
+════════════════════════════════ -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="omra-section-header fade-up">
+      <div class="section-eyebrow">معرض الصور</div>
+      <h2 class="omra-section-title">من رحلاتنا السابقة</h2>
+    </div>
+    <div class="gallery-masonry fade-up">
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1565552645632-d725f8bfc19a?w=800&q=80&fm=webp&auto=format" alt="الكعبة" loading="lazy"/>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=500&q=80&fm=webp&auto=format" alt="المسجد الحرام" loading="lazy"/>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?w=500&q=80&fm=webp&auto=format" alt="الطواف" loading="lazy"/>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1563177978-4c5ebf35b769?w=500&q=80&fm=webp&auto=format" alt="المسجد النبوي" loading="lazy"/>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=500&q=80&fm=webp&auto=format" alt="مكة" loading="lazy"/>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80&fm=webp&auto=format" alt="الإضاءة" loading="lazy"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     INCLUSIONS
+════════════════════════════════ -->
+<section class="inclusions-section">
+  <div class="container">
+    <div class="omra-section-header fade-up">
+      <div class="section-eyebrow">تفاصيل الباقة</div>
+      <h2 class="omra-section-title">ما يشمله ولا يشمله</h2>
+    </div>
+    <div class="inclusions-grid fade-up">
+      <div>
+        <h3 style="font-size:16px;font-weight:800;color:var(--dark);margin-bottom:20px;display:flex;align-items:center;gap:10px">
+          <span style="color:#27ae60"><i class="fas fa-check-circle"></i></span> ما تشمله جميع الباقات
+        </h3>
+        <ul class="inclusions-list">
+          <li>
+            <div class="inc-icon"><i class="fas fa-plane"></i></div>
+            <div class="inc-text"><strong>تذاكر الطيران ذهاباً وإياباً</strong><span>رحلات مباشرة أو غير مباشرة حسب الباقة</span></div>
+          </li>
+          <li>
+            <div class="inc-icon"><i class="fas fa-passport"></i></div>
+            <div class="inc-text"><strong>التأشيرة السعودية</strong><span>معالجة كاملة من قِبل الوكالة بدون تعب</span></div>
+          </li>
+          <li>
+            <div class="inc-icon"><i class="fas fa-hotel"></i></div>
+            <div class="inc-text"><strong>الإقامة الفندقية</strong><span>فنادق قريبة من الحرم حسب درجة الباقة</span></div>
+          </li>
+          <li>
+            <div class="inc-icon"><i class="fas fa-bus"></i></div>
+            <div class="inc-text"><strong>النقل الداخلي بالمملكة</strong><span>حافلات حديثة ومكيفة بين مكة والمدينة</span></div>
+          </li>
+          <li>
+            <div class="inc-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="inc-text"><strong>التأمين الطبي الشامل</strong><span>تغطية كاملة طيلة فترة الإقامة بالمملكة</span></div>
+          </li>
+          <li>
+            <div class="inc-icon"><i class="fas fa-user-tie"></i></div>
+            <div class="inc-text"><strong>المرافقة والإرشاد الديني</strong><span>مؤطر ذو خبرة يرافقكم طيلة الرحلة</span></div>
+          </li>
+          <li>
+            <div class="inc-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="inc-text"><strong>زيارة المزارات الدينية</strong><span>مكة المكرمة والمدينة المنورة وأهم المواقع</span></div>
+          </li>
+        </ul>
+
+        <h3 style="font-size:16px;font-weight:800;color:var(--dark);margin:28px 0 16px;display:flex;align-items:center;gap:10px">
+          <span style="color:#e74c3c"><i class="fas fa-times-circle"></i></span> لا تشمل الباقات
+        </h3>
+        <ul class="inclusions-list">
+          <li>
+            <div class="inc-icon exc-icon"><i class="fas fa-times"></i></div>
+            <div class="inc-text"><strong>المصروف الشخصي والتسوق</strong><span>المشتريات الخاصة والهدايا</span></div>
+          </li>
+          <li>
+            <div class="inc-icon exc-icon"><i class="fas fa-times"></i></div>
+            <div class="inc-text"><strong>بعض الوجبات (حسب الباقة)</strong><span>الغداء والعشاء في باقة الصيف</span></div>
+          </li>
+          <li>
+            <div class="inc-icon exc-icon"><i class="fas fa-times"></i></div>
+            <div class="inc-text"><strong>الرسوم الإضافية للأمتعة الزائدة</strong><span>الوزن المسموح به حسب الناقل الجوي</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="inclusions-img">
+        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=700&q=80&fm=webp&auto=format" alt="حقيبة العمرة" loading="lazy"/>
+        <div class="inclusions-img-caption">
+          <h4>احجز الآن وسنهتم بكل شيء</h4>
+          <p>من الوثائق إلى الفندق — فريقنا يرتب كل التفاصيل</p>
+          <a href="https://wa.me/212680003578?text=أريد%20الاستفسار%20عن%20باقات%20العمرة" target="_blank" class="btn btn-primary btn-sm" style="margin-top:14px;display:inline-flex">
+            <i class="fab fa-whatsapp"></i> تحدث معنا
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════ -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="omra-section-header fade-up">
+      <div class="section-eyebrow">آراء حجاجنا</div>
+      <h2 class="omra-section-title">ماذا يقول من سافروا معنا</h2>
+    </div>
+    <div class="testimonials-grid fade-up">
+      <div class="testimonial-card">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"رحلة عمرة رمضان مع أسفار المدينة كانت تجربة روحانية لا تُنسى. التنظيم ممتاز، الفندق قريب جداً من الحرم، والمرشد الديني أضاف الكثير لرحلتنا."</div>
+        <div class="test-author">
+          <img class="test-avatar" src="https://i.pravatar.cc/100?img=11" alt="أحمد"/>
+          <div>
+            <div class="test-name">أحمد البوعمري</div>
+            <div class="test-meta">رمضان 2025 · الدار البيضاء</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"سافرت للمرة الثانية مع أسفار المدينة وكل مرة أحسن من السابقة. الخدمة محترفة جداً والفريق يتابعك في كل خطوة حتى وأنت في مكة."</div>
+        <div class="test-author">
+          <img class="test-avatar" src="https://i.pravatar.cc/100?img=47" alt="فاطمة"/>
+          <div>
+            <div class="test-name">فاطمة الزهراء</div>
+            <div class="test-meta">عمرة شوال 2025 · مراكش</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-text">"باقة الصيف كانت ممتازة بالنسبة للسعر. أديت العمرة في 10 أيام بكل راحة. الوكالة تهتم بكل التفاصيل من التأشيرة حتى العودة. شكراً جزيلاً."</div>
+        <div class="test-author">
+          <img class="test-avatar" src="https://i.pravatar.cc/100?img=33" alt="يوسف"/>
+          <div>
+            <div class="test-name">يوسف المنصوري</div>
+            <div class="test-meta">عمرة صيف 2025 · فاس</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     FAQ
+════════════════════════════════ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="omra-section-header fade-up">
+      <div class="section-eyebrow">الأسئلة الشائعة</div>
+      <h2 class="omra-section-title">كل ما تريد معرفته</h2>
+    </div>
+    <div class="faq-grid fade-up" id="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>ما هي الوثائق المطلوبة للتسجيل؟</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">جواز سفر ساري المفعول لمدة 6 أشهر + صورة شخصية بيضاء + نسخة البطاقة الوطنية + شهادة تلقيح الحمى الشوكية. يمكنك إرسالها عبر واتساب.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>كم يستغرق الحصول على التأشيرة؟</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">عادةً بين 7 و15 يوم عمل من تسليم الملف الكامل. الوكالة تتولى جميع الإجراءات بالنيابة عنك.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>كم مبلغ التسجيل المسبق؟</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">مبلغ التسجيل المسبق هو 2,500 درهم لتأكيد مكانك والشروع في إجراءات التأشيرة. يمكن دفعه نقداً أو عبر التحويل البنكي.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>هل يمكن السفر مع العائلة؟</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">نعم، نوفر باقات عائلية بغرف مزدوجة وثلاثية. للأطفال دون 12 سنة تخفيضات خاصة. تواصل معنا لمعرفة التفاصيل.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>ما هو الفندق المستخدم في مكة والمدينة؟</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">نختار فنادق على بعد 50 إلى 300 متر من المسجد الحرام بمكة، وبالقرب من الباب 23 بالمدينة المنورة. التفاصيل حسب نوع الباقة.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>ما شروط الإلغاء واسترداد المبلغ؟</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">إلغاء مجاني قبل 30 يوم من السفر. بين 15 و30 يوم: 30% رسوم إلغاء. أقل من 15 يوم: 50% رسوم. في حالة الطوارئ الصحية استرداد كامل مع وثيقة طبية.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════
+     CTA BANNER
+════════════════════════════════ -->
+<div class="cta-banner">
+  <div class="container fade-up">
+    <div style="font-size:3rem;margin-bottom:16px">🕌</div>
+    <h2>لا تفوّت فرصة رحلة العمر</h2>
+    <p>المقاعد محدودة — سجّل اليوم وابدأ رحلتك الروحانية مع أسفار المدينة</p>
+    <div class="cta-btns">
+      <button class="btn btn-white btn-lg" onclick="openBooking('باقة عمرة','اختر الباقة')">
+        <i class="fas fa-calendar-check"></i> سجّل الآن
+      </button>
+      <a href="https://wa.me/212680003578?text=أريد%20الاستفسار%20عن%20باقات%20العمرة" target="_blank" class="btn btn-ghost btn-lg">
+        <i class="fab fa-whatsapp"></i> استفسر عبر واتساب
+      </a>
+      <a href="tel:+212680003578" class="btn btn-ghost btn-lg">
+        <i class="fas fa-phone"></i> +212 680 003 578
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div style="padding:30px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(255,255,255,.08)">
+      <span style="font-size:13px;color:rgba(255,255,255,.4)">© 2026 أسفار المدينة — جميع الحقوق محفوظة</span>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="index.html" class="btn btn-ghost btn-sm"><i class="fas fa-home"></i> الرئيسية</a>
+        <a href="index.html#packages" class="btn btn-ghost btn-sm"><i class="fas fa-suitcase"></i> الباقات</a>
+        <a href="blog.html" class="btn btn-ghost btn-sm"><i class="fas fa-blog"></i> المدونة</a>
+        <a href="tel:+212680003578" class="btn btn-primary btn-sm"><i class="fas fa-phone"></i> اتصل بنا</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT WA -->
+<a href="https://wa.me/212680003578?text=أريد%20الاستفسار%20عن%20باقات%20العمرة" target="_blank" class="float-wa">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ══ BOOKING MODAL ══ -->
+<div class="modal-overlay" id="booking-modal">
+  <div class="modal modal-booking">
+    <button class="modal-close" onclick="closeBooking()"><i class="fas fa-times"></i></button>
+    <h3>🕌 حجز باقة العمرة</h3>
+    <div class="offer-name" id="modal-offer-name"></div>
+    <form onsubmit="submitBooking(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>الاسم الكامل *</label>
+          <input type="text" placeholder="كما في جواز السفر" required/>
+        </div>
+        <div class="form-group">
+          <label>رقم الهاتف *</label>
+          <input type="tel" placeholder="+212 6XX XXX XXX" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>البريد الإلكتروني</label>
+          <input type="email" placeholder="example@email.com"/>
+        </div>
+        <div class="form-group">
+          <label>عدد الأشخاص *</label>
+          <select required>
+            <option value="">اختر...</option>
+            <option>1 شخص</option>
+            <option>2 شخص</option>
+            <option>3 أشخاص</option>
+            <option>4 أشخاص</option>
+            <option>5+ أشخاص</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>نوع الغرفة</label>
+        <select>
+          <option value="">اختر...</option>
+          <option>غرفة مفردة</option>
+          <option>غرفة مزدوجة</option>
+          <option>غرفة ثلاثية</option>
+          <option>جناح عائلي</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>ملاحظات أو أسئلة</label>
+        <textarea rows="3" placeholder="أي معلومات إضافية أو استفسارات..."></textarea>
+      </div>
+      <button type="submit" class="btn-book-now" style="width:100%;padding:15px;border-radius:12px;background:var(--grad-primary);color:white;font-size:15px;font-weight:800;border:none;cursor:pointer;font-family:'Cairo',sans-serif;display:flex;align-items:center;justify-content:center;gap:10px" id="submit-btn">
+        <i class="fas fa-calendar-check"></i> تأكيد الحجز
+      </button>
+      <a href="https://wa.me/212680003578" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:10px;padding:12px;border-radius:12px;background:#25d366;color:white;font-size:14px;font-weight:700;text-decoration:none">
+        <i class="fab fa-whatsapp"></i> أو أرسل عبر واتساب
+      </a>
+    </form>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="success-modal">
+  <div class="modal" style="text-align:center;max-width:400px">
+    <div style="font-size:4rem;margin-bottom:14px">✅</div>
+    <div style="font-size:1.4rem;font-weight:900;color:var(--dark);margin-bottom:8px">تم استلام طلبك!</div>
+    <div style="font-size:14px;color:var(--text-muted);margin-bottom:18px">سيتواصل معك فريقنا خلال 30 دقيقة لتأكيد الحجز وإرسال تفاصيل الدفع</div>
+    <div style="background:var(--bg);border-radius:12px;padding:12px;font-size:1.1rem;font-weight:700;color:var(--primary);letter-spacing:2px;margin-bottom:20px" id="success-ref"></div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a href="https://wa.me/212680003578" target="_blank" class="btn btn-primary">
+        <i class="fab fa-whatsapp"></i> تأكيد عبر واتساب
+      </a>
+      <button class="btn btn-outline" onclick="closeSuccessModal()">إغلاق</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══ HERO SLIDER ══
+let slide = 0;
+const slides = document.querySelectorAll('.omra-slide');
+const dots = document.querySelectorAll('.hero-slide-dot');
+function goSlide(n) {
+  slides[slide].classList.remove('active'); dots[slide].classList.remove('active');
+  slide = (n + slides.length) % slides.length;
+  slides[slide].classList.add('active'); dots[slide].classList.add('active');
+}
+setInterval(() => goSlide(slide + 1), 5000);
+
+// ══ FAQ ══
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ══ MODAL ══
+function openBooking(offerName, price) {
+  document.getElementById('modal-offer-name').textContent = offerName + ' — ' + price;
+  document.getElementById('booking-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeBooking() {
+  document.getElementById('booking-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeSuccessModal() {
+  document.getElementById('success-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.modal-overlay').forEach(o => {
+  o.addEventListener('click', e => {
+    if (e.target === o) { o.classList.remove('open'); document.body.style.overflow = ''; }
+  });
+});
+
+// ══ SUBMIT ══
+function submitBooking(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+  btn.disabled = true;
+  setTimeout(() => {
+    const ref = 'MV-' + Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('success-ref').textContent = ref;
+    closeBooking();
+    document.getElementById('success-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    btn.innerHTML = '<i class="fas fa-calendar-check"></i> تأكيد الحجز';
+    btn.disabled = false;
+    e.target.reset();
+  }, 2000);
+}
+
+// ══ SCROLL EFFECTS ══
+const scrollTop = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 60);
+  scrollTop.classList.toggle('show', scrollY > 400);
+  document.querySelectorAll('.fade-up').forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('visible');
+  });
+});
+
+// ══ NAVBAR HAMBURGER ══
+document.getElementById('hamburger')?.addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('is-open');
+});
+
+// Init fade-up
+setTimeout(() => document.querySelectorAll('.fade-up').forEach(el => {
+  if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('visible');
+}), 100);
+</script>
+</body>
+</html>
