@@ -640,6 +640,12 @@ body[dir="ltr"] .float-wa { left:auto; right:24px; }
   .nav-links.open a { padding:13px 16px; border-radius:12px; font-size:16px; border-bottom:1px solid var(--border); }
   .hamburger { display:flex; }
   .btn-book { display:none; }
+  /* Hide phone CTA in navbar on mobile — too crowded */
+  .nav-actions .btn.btn-primary.btn-sm { display:none; }
+  /* Compact nav-actions */
+  .nav-actions { gap:6px; }
+  .lang-switcher { gap:2px; }
+  .lang-btn { padding:5px 8px; font-size:11px; }
   .hero { min-height:85vh; }
   .hero-content { padding:24px 16px; }
   .hero-btns { flex-direction:column; align-items:center; }
@@ -752,12 +758,13 @@ body[dir="ltr"] .float-wa { left:auto; right:24px; }
 
 /* ── MOBILE NAV EXTRA ── */
 @media(max-width:480px) {
-  .logo-title { font-size:14px; }
-  .logo-sub { font-size:8px; }
-  .logo img { height:38px; width:38px; }
-  .nav-inner { padding:0 12px; }
+  .logo-title { font-size:13px; }
+  .logo-sub { display:none; }
+  .logo img { height:36px; width:36px; }
+  .nav-inner { padding:0 10px; height:56px; }
   .lang-switcher { gap:2px; }
-  .lang-btn { padding:4px 7px; font-size:11px; }
+  .lang-btn { padding:4px 7px; font-size:10px; }
+  .nav-actions { gap:4px; }
 }
 
 /* ── CONTACT GRID ── */
