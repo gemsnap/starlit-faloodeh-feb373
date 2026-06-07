@@ -569,6 +569,7 @@
       <button class="pkg-tab-btn" onclick="filterPkgs('gulf',this)">🏙️ الخليج</button>
       <button class="pkg-tab-btn" onclick="filterPkgs('europe',this)">🗼 أوروبا</button>
       <button class="pkg-tab-btn" onclick="filterPkgs('exotic',this)">🌴 الاستوائية</button>
+      <button class="pkg-tab-btn" onclick="filterPkgs('morocco',this)">🇲🇦 المغرب</button>
     </div>
     <div class="packages-grid" id="pkgs-grid">
       <!-- Package 1: Omra -->
@@ -736,7 +737,32 @@
             </div>
           </div>
         </div>
+      
+      <!-- Package: Morocco -->
+      <div class="pkg-card fade-up" data-cat="morocco">
+        <div class="pkg-img-wrap">
+          <img class="pkg-img" src="https://images.unsplash.com/photo-1539020140153-e479b8e15f63?w=700&q=85&fm=webp&auto=format" alt="المغرب" loading="lazy" width="340" height="200"/>
+          <span class="pkg-badge badge badge-success">وجهة محلية</span>
+          <span class="pkg-duration"><i class="fas fa-clock"></i> 7 أيام</span>
+        </div>
+        <div class="pkg-body">
+          <div class="pkg-title">جولة المغرب الكبرى — مراكش، فاس والصحراء</div>
+          <div class="pkg-features">
+            <span class="pkg-feat"><i class="fas fa-plane"></i> طيران داخلي</span>
+            <span class="pkg-feat"><i class="fas fa-hotel"></i> رياض أصيل</span>
+            <span class="pkg-feat"><i class="fas fa-bus"></i> جولات مع مرشد</span>
+            <span class="pkg-feat"><i class="fas fa-moon"></i> نوم في الصحراء</span>
+          </div>
+          <div class="pkg-footer">
+            <div>
+              <div class="pkg-price">3,900 <span data-i18n="label.perPerson">/ للشخص</span></div>
+              <div class="pkg-rating">⭐ 4.9 (87 تقييم)</div>
+            </div>
+            <a href="https://wa.me/212680003578?text=أريد%20الاستفسار%20عن%20جولة%20المغرب" class="btn btn-primary btn-sm" target="_blank">احجز الآن</a>
+          </div>
+        </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -958,6 +984,56 @@
     </div>
   </div>
 </section>
+
+
+  <!-- ═══ MOROCCO GALLERY ═══ -->
+  <section style="padding: 80px 0; background: #fafafa;">
+    <div class="container">
+      <div class="section-header fade-up" style="text-align:center; margin-bottom:40px;">
+        <div class="section-tag">🇲🇦 وجهة مميزة</div>
+        <h2 class="section-title">المغرب — بلد الألوان والأحلام</h2>
+        <p class="section-sub">من رمال الصحراء الذهبية إلى أسواق مراكش العريقة — تجربة سفر لا تُنسى</p>
+      </div>
+      <div class="morocco-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items:start;">
+        <div class="fade-up" style="border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,0.12);">
+          <img src="https://media.base44.com/images/public/whatsapp/6a11952f4d8ce5a485f1893b/your_agent/6a11952f4d8ce5a485f1893c/6d37a03e5_whatsapp_image_4506969939621935.jpg"
+               alt="المغرب السياحي — الصحراء، مراكش، فاس"
+               loading="lazy"
+               class="morocco-grid-img" style="width:100%; height:500px; object-fit:cover; display:block;"
+               width="540" height="500"/>
+        </div>
+        <div class="morocco-sub-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;" class="fade-up">
+          <div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1504598318550-17ded0173ef3?w=400&q=80&fm=webp&auto=format"
+                 alt="جمال الصحراء المغربية" loading="lazy"
+                 style="width:100%; height:240px; object-fit:cover; display:block;" width="260" height="240"/>
+          </div>
+          <div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400&q=80&fm=webp&auto=format"
+                 alt="مسجد الكتبية — مراكش" loading="lazy"
+                 style="width:100%; height:240px; object-fit:cover; display:block;" width="260" height="240"/>
+          </div>
+          <div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1539020140153-e479b8e15f63?w=400&q=80&fm=webp&auto=format"
+                 alt="المدينة القديمة — فاس" loading="lazy"
+                 style="width:100%; height:240px; object-fit:cover; display:block;" width="260" height="240"/>
+          </div>
+          <div style="border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1551734710-93a5e7e6d073?w=400&q=80&fm=webp&auto=format"
+                 alt="ساحة جامع الفنا" loading="lazy"
+                 style="width:100%; height:240px; object-fit:cover; display:block;" width="260" height="240"/>
+          </div>
+        </div>
+      </div>
+      <div class="fade-up" style="text-align:center; margin-top:40px;">
+        <p style="font-size:1.1rem; color:#666; margin-bottom:20px;">اكتشف جمال المغرب مع مرشدينا المحترفين — باقات مخصصة لكل الميزانيات</p>
+        <a href="https://wa.me/212680003578?text=أريد%20الاستفسار%20عن%20رحلة%20المغرب"
+           class="btn btn-primary" target="_blank">
+          <i class="fab fa-whatsapp"></i> احجز جولة المغرب
+        </a>
+      </div>
+    </div>
+  </section>
 
 <!-- ════════ BLOG ════════ -->
 <section class="section" id="blog">
@@ -1214,7 +1290,16 @@
 @media(max-width:768px){
   #idx-ta-grid { grid-template-columns:1fr !important; }
 }
-</style>
+
+    /* Morocco Gallery */
+    @media (max-width: 768px) {
+      .morocco-grid { grid-template-columns: 1fr !important; }
+      .morocco-grid-img { height: 300px !important; }
+      .morocco-sub-grid { grid-template-columns: 1fr 1fr !important; }
+      .morocco-sub-grid img { height: 160px !important; }
+    }
+
+  </style>
 
 <!-- ════════ FOOTER ════════ -->
 <footer class="footer">
